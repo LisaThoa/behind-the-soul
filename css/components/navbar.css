@@ -1,0 +1,42 @@
+/*** ------------------------------- ***/
+/*** BARRE DE NAVIGATION ----------- ***/
+
+/* Conteneur de la barre de nav */
+.navbar {
+  background: var(--contrast);
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 6px 12px;
+  outline: 1px solid var(--textColorAccent);
+}
+.navbar a[href^="/faq"],
+.navbar a[href^="/calendar"],
+.navbar a[href^="/images"]
+  {
+  display: none;
+}
+
+/* liens de navigation */
+a.mainmenu {
+  padding: 3px 12px;
+  background: var(--neutral);
+  border-radius: 6px;
+  outline: 1px solid var(--textColorAccent);
+}
+
+/* Lien navigation au survol*/
+a.mainmenu:hover {
+  background: var(--neutral);
+  border-radius: 6px;
+}
+
+/* Image des liens */
+a.mainmenu img {
+  display: none;
+}

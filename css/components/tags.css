@@ -1,0 +1,46 @@
+/*** ------------------------------- ***/
+/*** PROFILS SIMPLIFIÉS DES TAGS ---- ***/
+
+/* Supression de la flèche peu esthétique*/
+.tooltipster-arrow {}
+
+.tooltipster-default {}
+
+.preview_content {
+  display: flex;
+}
+
+.preview_avatar img {
+  object-fit: cover;
+  object-position: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.preview_infos {
+  width: 100%;
+  padding-top: 3px;
+}
+
+.preview_pseudo,
+.preview_pseudo strong {
+  font-size: var(--medium-size);
+}
+
+.preview_contacts {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.preview_contacts a {
+  margin-left: 5px;
+}
+
+.tooltipster-arrow {
+  display: none;
+}

@@ -1,0 +1,176 @@
+/****** ------------------------------------------------------------------------------
+ ****** LISTE DES SUJETS ------------------------------------------------------------- ******/
+
+/*** ------------------------------- ***/
+/*** ENTETE ET FOOTER DE LA LISTE DES SUJETS ***/
+
+/* Chaîne de navigation et pagination
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body)) */
+.navigation_links {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* chaîne de lien de navigation : catégorie > forum > sous-fo */
+.navigation_chain {
+  font-size: 0;
+  /*retire les :: de séparation */
+}
+
+.navigation_chain a {
+  font-size: initial;
+  /*rétablit la taille des liens*/
+  margin-right: 8px;
+}
+
+.navigation_chain a:before {
+  content: "›";
+  /*symbole ou texte modifiable*/
+  font-size: var(--nomal-size);
+  margin-right: 3px;
+}
+
+/* BOUTONS DE MESSAGE : Répondre, Nouveau,... ---* 
+ * (réutilisé dans l'affichage d'un sujet (viewtopic_body) et les MP (privmsgs_body) */
+.buttons {
+  background: var(--neutralDark);
+  padding: 1px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.buttons:hover {
+  opacity: 0.7;
+}
+
+/* BOUTONS : modérer les sujets de ce forum */
+#moderation_forum_tools,
+#moderation_forum_tools strong {
+  font-size: 0px;
+}
+
+#moderation_forum_tools a {
+  background: var(--neutralDark);
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: var(--normal-size);
+}
+
+/*** ------------------------------- ***/
+/*** LISTE DES SUJETS -------------- ***/
+
+/* Bloc de description du forum */
+.forum-page_desc {
+  margin: 0 0 20px;
+  background: var(--neutral);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Conteneur sujet dans la liste */
+.topicslist_row {
+  background: var(--neutral);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.topicslist_row:last-child {
+  margin-bottom: 0;
+}
+
+/* Image du sujet */
+.topicslist-img {
+  width: 50px;
+  height: 50px;
+  background: var(--neutralDark);
+}
+
+.topicslist_infos {
+  flex-grow: 100;
+}
+
+/*titre du sujet*/
+.topictitle {
+  font-size: var(--medium-size);
+  /* permet de raccourir les titres trop long ainsi : "Titre du suj..." */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 430px;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+/* icône de type de message ( exemple : -18 ans, sujet résolu, ... ) */
+.topic_msgicon {
+  margin-right: 5px;
+}
+
+.topic_msgicon:empty {
+  display: none;
+}
+
+.topiclist-infos img {
+  margin-right: 3px;
+}
+
+.topicslist-stats {
+  text-align: right;
+}
+
+.topicslist-avatar-lastpost img {
+  object-fit: cover;
+  object-position: center;
+  width: 50px;
+  height: 50px;
+  background: var(--neutralDark);
+}
+
+.topicslist-lastpost {
+  width: 180px;
+}
+
+.topicslist-description {
+  border-top: 1px solid var(--neutralDark);
+  padding-top: 5px;
+  width: 100%;
+}
+
+/* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
+.topic_separator {
+  height: 5px;
+  background: var(--neutral);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Bouton "trier les sujets" */
+#sort-topics {
+  position: relative;
+  display: inline;
+  background: var(--neutralDark);
+  margin: 10px 0;
+}
+
+.sort-form {
+  width: max-content;
+  background: var(--neutral);
+  border: 1px solid var(--neutralDarker);
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 110%;
+  right: 0;
+  display: none;
+}
+
+.expanded~.sort-form {
+  display: block;
+}

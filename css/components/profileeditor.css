@@ -1,0 +1,67 @@
+/*** ------------------------------- ***/
+/*** EDITION DE PROFIL ------------- ***/
+
+/* Onglets dans la modification de profil */
+#tabs ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0 10px;
+}
+
+/*onglet*/
+#tabs li {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+/* Onglet selectionné */
+#tabs li.activetab {
+  background: var(--neutralDark);
+  border: var(--border);
+  border-radius: 5px;
+}
+
+/* onglet au survol */
+#tabs li:hover {
+  background: var(--neutralDark);
+  border-radius: 5px;
+  border: var(--border);
+}
+
+/* Suppression de l'onglet "amis et ignorés" */
+div#tabs li:nth-child(5) {
+  display: none;
+}
+
+.profil_preferences dl,
+.profil_editavatar dl {
+  grid-template-columns: 40% auto;
+}
+
+.profil_preferences .italic {
+  font-size: var(--little-size);
+}
+
+/* EDITER SIGNATURE ---*/
+#parent_editor_simple>#smiley-box {
+  float: left;
+  /* float: right; -- pour smileys à droite */
+}
+
+#parent_editor_simple #message-box {
+  margin-left: 240px;
+  /* margin-right: XXXpx -- pour smileys à droite */
+}
+
+#parent_editor_simple #message-box>br {
+  display: none;
+}
+
+#parent_editor_simple #message-box>#textarea_content {
+  width: 100% !important;
+}
+
+.panel.row2.sig {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,36 @@
+/*** ------------------------------- ***/
+/*** LISTE DES MEMBRES ------------- ***/
+
+.userlist {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+.userlist_profil {
+  display: grid;
+  grid-template-columns: 95px auto;
+  grid-gap: 10px;
+  padding: 10px;
+  background: var(--neutral);
+  border-radius: 5px;
+}
+
+.userlist_avatar {}
+
+.userlist_avatar img {
+  width: 75px;
+  height: 120px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.userlist_details {}
+
+.userlist_pseudo {
+  font-size: var(--medium-size);
+}
+
+.userlist_infos {}
+
+.userlist_contact {}

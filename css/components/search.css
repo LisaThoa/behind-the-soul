@@ -1,0 +1,69 @@
+/*** ------------------------------- ***/
+/*** PAGES DE RECHERCHES ----------- ***/
+
+/* RECHERCHE DE MESSAGE -----*/
+
+/* Conteneur d'un message*/
+.post_search {
+  display: grid;
+  grid-template-columns: 200px auto;
+  border-radius: 5px;
+  margin: 10px 0;
+  background: var(--neutral);
+}
+
+.post_search>div {
+  padding: 10px;
+}
+
+/* Colonne d'information du message */
+.postsearch_infos {
+  border-right: var(--border);
+  font-size: var(--little-size);
+}
+
+/* RECHERCHE DE SUJET -----*/
+/* Même CSS que la liste des sujets dans un forum */
+
+/* Boîte "recherche un utilisateur" */
+#find_username {
+  display: none;
+  position: fixed;
+  left: 50%;
+  width: 450px;
+  margin-left: -225px;
+  top: 50%;
+  margin-top: -125px;
+  background-color: var(--neutral);
+  padding: 10px;
+  border: var(--border);
+  border-radius: 5px;
+}
+
+/*** ------------------------------- ***/
+/*** ELEMENTS FLOTTANTS ------------ ***/
+
+/* Fenêtre popup "recherche" */
+.overview {
+  background: var(--neutral);
+  border-radius: 5px;
+  border: var(--border);
+  padding: 10px;
+  position: fixed !important;
+  top: 50% !important;
+}
+
+/* Bouton rechercher */
+.overview button[type="submit"] {
+  width: 26px;
+  height: 26px;
+  margin-left: 5px;
+}
+
+.overview div {
+  margin-bottom: 5px;
+}
+
+.overview a {
+  float: right;
+}

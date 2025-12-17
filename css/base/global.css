@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--contrastLight);
+  scrollbar-width: thin;
+  transition:0.3s;
+}
+
+body {
+  background: var(--neutralDark);
+  font-family: var(--font);
+  font-size: var(--normal-size);
+  color: var(--textColor);
+  margin: 0 !important;
+}
+
+::-webkit-scrollbar {}
+::-webkit-scrollbar-track {}
+::-webkit-scrollbar-thumb {}
+
+.main_forum {
+  width: 940px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/****** ------------------------------------------------------------------------------
+ ****** GÉNÉRALITÉS ------------------------------------------------------------------ 
+ ****** Sélecteurs généraux s'appliquant à plusieurs reprises sur tout le forum ******/
+
+/*** ----------------------------------- ***/
+/*** LIENS ET TEXTE -------------------- ***/
+
+/* LIENS DU FORUM --- */
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--textColorAccent);
+}
+
+/*liens au survol*/
+a:hover {
+  color: var(--accentClr);
+}
+
+/* Emoji mis par défaut de FA
+ * Les réduire les rend moins horribles à voir */
+.emojione {
+  width: 19px !important;
+}
+
+/* TITRES DES PAGES --- ***/
+
+/* Utilisé pour des titres de pages */
+h1,
+h1.page-title {
+  color: var(--contrastLight);
+  margin: 10px 0 20px;
+  font-size: var(--title-size);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Utilisé pour des titres de sujets, blogs... */
+h2,
+.h2 {
+  margin: 0;
+  font-size: var(--large-size);
+  font-weight: 700;
+}
+
+/* Utilisé pour des titres de sous-sections, petit encadré, ...*/
+h3,
+.h3 {
+  color: var(--contrastLight);
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: var(--medium-size);
+  font-weight: bold;
+}
+
+/*** --------------------------------------- ***/
+/*** BOUTONS D'INTERACTION ET BARRE DE TEXTE ***/
+
+/* CHAMPS DE TEXTE ---*/
+input:is([type="text"], [type="password"], .inputbox),
+textarea {
+  border: none;
+  border-radius: 5px;
+  background: var(--neutralDark);
+  font-size: var(--normal-size);
+  color: var(--contrastLight) !important;
+  padding: 8px 10px;
+}
+
+/* Au focus */
+:focus:is(input:is([type="text"], [type="password"], .inputbox), textarea) {
+  outline: none;
+  border: 1px solid var(--accentClr);
+}
+
+/* BOUTONS D'INTERACTION --- *
+ * Envoyer, prévisualiser, sauvegarder, aller,... */
+input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+.button,
+button {
+  font-size: var(--normal-size);
+  padding: 10px 15px !important;
+  border-radius: 5px;
+  background: var(--neutralDarker);
+  color: var(--contrastLight);
+  font-weight: 600;
+  border: none;
+}
+
+/* Au survol */
+:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  color: var(--accentClr);
+}
+
+/* Boutons désactivés */
+:disabled:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  opacity: .5;
+  filter: saturate(1);
+  cursor: not-allowed;
+}
+
+:disabled:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+  color: inherit;
+}
+
+.submit-buttons {
+  text-align: center;
+}
+
+.quickmod {
+  margin-bottom: 20px;
+}
+
+/* MENUS DEROULANTS --- */
+select {
+  background: transparent;
+  border: var(--border);
+  border-radius: 5px;
+  font-size: var(--normal-size);
+  padding: 8px 10px;
+  color: var(--textColor);
+}
+
+select:focus-visible {
+  outline: 1px solid var(--accentClr);
+}
+
+/*** ------------------------------- ***/
+/*** ELEMENTS ESTHETIQUES ---------- ***/
+
+/* Contenur général qui sert généralement de fond et/ou de contour*/
+.container {
+  background: var(--neutralDark);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Barre de séparation */
+.separator {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--neutralDark);
+  clear: both;
+  height: 1px;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-top: var(--border);
+}
+
+/* Titre d'un toggle */
+summary {
+  cursor: pointer;
+}
+
+/* Conteneur moins large (les historiques des messages essentiellement) */
+.wrapped {
+  width: 80%;
+  margin: 10px auto;
+  clear: both;
+}
+
+/* Image/avatar réduit */
+.mini_img img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+  margin-right: 10px;
+  background: var(--neutralDark);
+}
+
+/* Permet d'aligner un élément à droite ou à gauche */
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Barre de gestion 
+ * Contient des boutons ou des liens spéciaux */
+.links_bar {
+  padding: 10px;
+  border: var(--border);
+  border-radius: 5px;
+  margin: 25px 0;
+  clear: both;
+}
+
+/* supprime si vide */
+.links_bar:empty {
+  display: none;
+}
+
+/* Lien spécial mis en avant */
+.specials_links a,
+a.specials_links {
+  background: var(--neutralDark);
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+/* Suppression des liens vides */
+.specials_links a:empty,
+a.specials_links:empty {
+  display: none;
+}

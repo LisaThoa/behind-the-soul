@@ -1,0 +1,72 @@
+#header {
+  background-image: var(--header);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 100%;
+  height: 330px;
+  display: block;
+}
+
+/****** ------------------------------------------------------------------------------ 
+ ****** ENTETE DU FORUM --------------------------------------------------------------
+ ****** Tous les éléments qui s'affichent en tête de toutes les pages ---------------- ******/
+
+/* Notiffi CSS */
+/* Cache la toolbar défaut */
+#fa_toolbar {
+  display: none
+}
+
+/* Bouton de notification */
+#notiffi_button {
+  cursor: pointer;
+  background: var(--neutral);
+  outline: var(--border);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding: 3px 12px;
+  z-index: 99;
+}
+
+/* Conteneur du nombre de notification non lues REMPLI */
+.unread_count {
+  position: relative;
+  background: var(--neutralDarker);
+  border-radius: 5px;
+  width: 25px;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 12px;
+  scale: 1;
+  opacity: 1;
+  aspect-ratio: 1;
+  transition: scale ease-out .2s;
+}
+
+/* Conteneur du nombre de notification non lues VIDE */
+.unread_count:empty {
+  position: absolute;
+  scale: 0;
+  opacity: 0;
+  transition: all ease-out .2s;
+}
+
+/*** ------------------------------- ***/
+/*** ANNONCES DEFILANTES ----------- ***/
+
+/* Barre défilante */
+.module {
+  border-radius: 5px;
+  border: var(--border);
+  margin: 10px 0;
+  padding: 4px 8px;
+}
+
+/****** ------------------------------------------------------------------------------
+ ****** PAGE PRINCIPALE, INDEX ------------------------------------------------------- ******/
+
+/* PAGE D'ACCUEIL ---*/
+.introduction {}

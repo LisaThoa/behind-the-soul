@@ -1,0 +1,79 @@
+/*** ------------------------------- ***/
+/*** EDITEUR DE TEXTE -------------- ***/
+/* Editeur de texte */
+.sceditor-container {
+  border: var(--border) !important;
+  background-color: var(--neutral) !important;
+}
+
+/* Barre d'outils de l'éditeur de texte*/
+div.sceditor-toolbar {
+  background: var(--neutral) !important;
+  border-bottom: var(--border) !important;
+}
+
+/* Conteneur des groupes d'outils */
+div.sceditor-group {
+  background: var(--neutralDark) !important;
+  border-bottom: var(--border) !important;
+}
+
+/* Bouton d'un outil */
+a.sceditor-button {
+  height: 26px !important;
+  /*ne pas retirer*/
+  width: 26px !important;
+  /*ne pas retirer*/
+}
+
+/* Bouton d'un outil au survol ou actif*/
+.sceditor-button.active,
+.sceditor-button:active,
+.sceditor-button:hover,
+.sceditor-button.hover {
+  background: var(--neutral) !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: 1px solid var(--neutralDarker);
+}
+
+/* Conteneur de la zone de texte */
+.sceditor-container iframe,
+.sceditor-container textarea {
+  background-color: var(--neutral) !important;
+  /*ne pas supprimer*/
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 5px !important;
+  /*ne pas supprimer*/
+  min-height: 250px !important;
+}
+
+.sceditor-container textarea:focus {
+  outline: none
+}
+
+/*Boîte Smiley*/
+html#sceditor_smilies,
+body#sce_smilies_body {
+  background: transparent !important;
+}
+
+/*** ------------------------------- ***/
+/*** PAGE D'ENVOI D'UN MESSAGE ----- ***/
+
+.message-edition {
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: row-reverse; -- pour smileys à droite */
+  gap: 15px;
+  /*espace entre la zone de texte et la boîte à smileys*/
+}
+
+/* Prévisualisation d'un message */
+#preview {
+  background: var(--neutral);
+  padding: 10px;
+  border: var(--border);
+  border-radius: 5px;
+}

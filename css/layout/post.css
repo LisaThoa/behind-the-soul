@@ -1,0 +1,383 @@
+/****** ------------------------------------------------------------------------------
+ ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
+
+/* PARTICIPANTS DU SUJET ---*/
+
+/* Conteneur de la liste des participants au sujet */
+.poster-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Avatar du participant*/
+.poster {
+  background: var(--poster-avatar);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-left: -8px;
+  border: 2px solid var(--neutralDark);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Lien de renvoi vers son profil */
+.poster a {
+  display: block;
+  height: 100%;
+}
+
+/* Nombre de participants */
+.poster-count {
+  margin-left: 8px;
+}
+
+.poster-more-list {
+  display: none;
+}
+
+.poster-more {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.poster-more:hover .poster-more-list {
+  display: block;
+  position: absolute;
+  top: 29px;
+  width: 150px;
+  background: var(--neutralDarker);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*** ------------------------------- ***/
+/*** SUJET ------------------------- ***/
+
+.post_row {
+  background: var(--neutral);
+  display: grid;
+  grid-template-rows: max-content auto;
+  grid-template-columns: min-content 1fr;
+  border-bottom: 1px solid var(--neutralDark);
+}
+
+div.post_row:nth-of-type(2) {
+  border-radius: 5px 5px 0 0;
+}
+
+div.post_row:last-of-type {
+  border-radius: 0 0 5px 5px;
+  border-bottom: none;
+}
+
+.post_details {
+  grid-column: 1 / span 2;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--neutralDark);
+  width: 100%;
+}
+
+.post_date {
+  flex-grow: 100;
+}
+
+/* BOUTONS D'EDITION DU MESSAGE --- */
+/* Conteneur boutons d'édition */
+ul.profile-icons {
+  flex-grow: 1;
+  display: flex;
+}
+
+/*UN SEUL bouton d'édition */
+ul.profile-icons li {
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+/* Cache les boutons pour les invités */
+.profile-icons a[href=""] {
+  display: none
+}
+
+/*hover d'un bouton d'édition*/
+ul.profile-icons li:hover {
+  background: var(--neutralDark);
+}
+
+/* BOUTON LIKE --- */
+/* Conteneur du bouton like */
+.like_button {
+  float: right;
+  margin-left: 10px;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+/* Bouton like */
+.rep-button,
+.rep-button:active,
+.rep-button:focus {
+  background: var(--neutralDark);
+  color: var(--textColor);
+  border: none;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/*Bouton au survol*/
+.rep-button:hover {
+  background: var(--var(--contrastLighter));
+}
+
+/* Texte "j'aime" */
+button.rep-button .like_text {}
+
+/*compteur de like*/
+button.rep-button .rep-nb {
+  margin-left: 5px;
+  padding: 0 3px;
+  background: var(--neutral);
+  border-radius: 3px;
+}
+
+.post_profile {
+  padding: 10px;
+  border-right: 1px solid var(--neutralDark);
+}
+
+.post_pseudo {
+  font-weight: bold;
+}
+
+/* Lien "@" de mention */
+a.fa-mention {
+  cursor: pointer;
+}
+
+/* Mention "en ligne" */
+.presence {
+  display: none
+}
+
+.presence.online {
+  display: inline-block;
+  position: relative;
+  background-color: var(--neutralDarker);
+  border-radius: 5px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+/* RECOMPENSES --- */
+/* Conteneur des récompenses */
+#list_awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* Récompense */
+.award {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background-image: var(--award-image);
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.award:hover .award_tooltiptext {
+  display: block;
+}
+
+/* Bloc description de la récompenses */
+.award_tooltiptext {
+  width: max-content;
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25px;
+  background-color: var(--neutral);
+  border: 1px solid var(--neutralDark);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* titre de la récompenses*/
+.award_tooltiptext_title {
+  font-weight: 600;
+}
+
+.online:empty {
+  display: none;
+}
+
+.post_message {
+  padding: 25px;
+}
+
+/* REPONSE RAPIDE --- */
+/*supression de la mention "réponse rapide" */
+.quickreply div.h3 {
+  display: none;
+}
+
+/*centrer la réponse rapide*/
+.quickreply {
+  display: flex;
+  justify-content: center;
+}
+
+/* Retire le cadre de la réponse rapide pour les invités */
+#quickreply_content:empty {
+  display: none;
+}
+
+/*** ------------------------------- ***/
+/*** SONDAGE ----------------------- ***/
+
+.poll {
+  background: var(--neutral);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.head_poll {
+  padding: 10px;
+  border-bottom: 1px solid var(--neutralDark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.poll_list {
+  display: grid;
+  grid-template-columns: 220px auto;
+}
+
+.poll_option {
+  padding: 10px 20px 0 10px;
+  border-right: 1px solid var(--neutralDark);
+  text-align: right;
+}
+
+.poll_vote {
+  padding: 10px 10px 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.poll_send {
+  margin-left: 220px;
+  padding: 20px 10px 20px 20px;
+  border-left: 1px solid var(--neutralDark);
+}
+
+.poll_vote:nth-child(2),
+.poll_option:first-child {
+  padding-top: 20px;
+}
+
+.votes-users-list {
+  justify-content: start;
+  margin: 20px 0 0;
+}
+
+/*** ------------------------------- ***/
+/*** TEXTES, BALISES, ETC ---------- ***/
+
+/* Lien-tag des utilisateurs */
+.mentiontag {}
+
+/* BALISES DE MESSAGE : spoiler, code, quote... */
+
+/* Balise code, spoiler et hide*/
+.codebox {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Contenu code, spoiler et hide*/
+.codebox dd {
+  background: var(--neutralDark);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Nom de balise "code, spoiler" */
+.codebox dt {
+  font-weight: 700;
+  font-size: var(--little-size);
+}
+
+/*retire la mention "code" du bloc*/
+#codeBox dt {
+  height: 0;
+  font-size: 0;
+}
+
+/* bouton "copier" */
+.copyCode {
+  font-size: 12px;
+  font-weight: normal;
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  font-family: monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+div.cont_code {
+  clear: right;
+}
+
+/* Spoiler */
+.hidebox.spoiler {}
+
+/* spoiler fermé */
+.spoiler_content {
+  display: none;
+}
+
+/* spoiler ouvert */
+.spoiler_content.hidden {
+  display: block;
+}
+
+/* Citation contenu */
+blockquote div {
+  padding-left: 20px;
+}
+
+/* Citation mention "... a écrit" */
+blockquote cite {
+  display: block;
+  margin-left: -20px;
+  font-style: normal;
+}
+
+/* Citation pseudo */
+blockquote cite a {
+  text-decoration: none !important;
+}
+
+/* Hide */
+.codebox.hidecode dd {
+  background: transparent;
+  opacity: 0.8;
+}

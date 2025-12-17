@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light;
+  --header: url('https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png');
+
+  --neutral: #fff8e8;
+  --neutralDark: #fef7e5;
+  --neutralDarker: #f7f0df;
+
+  --contrast: #e09d74;
+  --contrastLight: #cd9979;
+  --contrastLighter: #d3ded4;
+
+  --accentClr: #89bbd6;
+  --accentClrDark: #de9870;
+
+  --textColor: #030201;
+  --textColorAccent: #030201;
+
+  --border: 1px solid #030201;
+
+  --shadowBox: 0 0 20px #030201;
+
+  --little-size: 10px;
+  --normal-size: 11px;
+  --medium-size: 12px;
+  --large-size: 16px;
+  --title-size: 18px;
+
+  --font: "Poppins";
+  --altFont: "Google Sans Code"
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+  --header: url('https://images2.imgbox.com/89/30/IXFzrs0y_o.png');
+
+  --neutral: #1e212a;
+  --neutralDark: #181a21;
+  --neutralDarker: #313543;
+
+  --contrast: #e5e5f0;
+  --contrastLight: #f4f4f4;
+  --contrastLighter: #40485e;
+
+  --accentClr: #7583ff;
+  --accentClrDark: #333c92;
+
+  --textColor: #c7c5cd;
+  --textColorAccent: #e5e5f0;
+
+  --border: 1px solid #2b2e3b;
+
+  --shadowBox: 0 0 20px var(--neutralDark);
+}
+
+@keyframes blink {50% {border-color: transparent}}

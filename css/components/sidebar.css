@@ -1,0 +1,83 @@
+/* Conteneur de toutes les sous-sections
+ * comme les encadrés d'options, de rappel, etc... */
+.panel {
+  background: var(--neutral);
+  border: var(--border);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 25px 0;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: var(--contrastLighter);
+  outline: 1px solid var(--textColorAccent);
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  bottom:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 6px 12px;
+  z-index: 999;
+}
+
+/* Conteneur de switcheroo */
+.sidebar_top {
+  display: flex;
+  flex-direction: row;
+  gap: 10px
+}
+
+/* Conteneur de l'ascenseur
+ * Sert essentiellement à définir où le placer dans la page */
+.sidebar_bottom {
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* Lien de renvoi haut/bas */
+.sidebar_bottom>a {
+  background: var(--neutralDark);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* BOUTON CHANGEMENT DE THEME ---*/
+@media (prefers-color-scheme: dark) {
+  .color-scheme-toggle .dark {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .color-scheme-toggle .light {
+    display: none;
+  }
+}
+
+.color-scheme-toggle,
+[data-color-scheme="light"] .color-scheme-toggle .dark,
+[data-color-scheme="dark"] .color-scheme-toggle .light {
+  display: block;
+  width: 100%;
+}
+
+[data-color-scheme="dark"] .color-scheme-toggle .dark,
+[data-color-scheme="light"] .color-scheme-toggle .light {
+  display: none;
+}
+
+.color-scheme-toggle {
+  background-color: var(--neutralDark);
+  text-align: center;
+  border-radius: 5px;
+  color: var(--textColor);
+  padding:3px !important;
+}
+
+.color-scheme-toggle:hover {
+  color: var(--accentClr);
+}

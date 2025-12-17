@@ -1,0 +1,90 @@
+/*** ------------------------------- ***/
+/*** PAGE DE PROFIL ---------------- ***/
+
+.user_profile {
+  background: var(--neutral);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: max-content auto;
+  padding: 10px;
+  grid-gap: 20px;
+}
+
+.profile_avatar {
+  width: 200px;
+}
+
+.profile_infos {}
+
+.profile_contact {
+  display: flex;
+  gap: 5px;
+  float: right;
+}
+
+.profile_content {
+  height: 265px;
+  overflow: auto;
+}
+
+.profile_field {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 135px auto;
+  grid-gap: 10px;
+}
+
+.profile_field label,
+.profile_field label>span {
+  font-weight: 600;
+  color: var(--link);
+}
+
+.profile_field field {
+  position: relative;
+}
+
+.profile_admin {
+  text-align: center;
+  margin: 10px 0 0;
+}
+
+/* Bouton "suivre le membre" */
+.followBtn {
+  background: var(--neutral);
+  border: 1px solid var(--neutralDark);
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px;
+}
+
+.followBtn::before {
+  top: 1px;
+  position: relative;
+  color: var(--accentClr);
+  margin-right: 5px;
+}
+
+/* Bouton édition d'un champ de profil */
+.ajax-profil_edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+/* Bouton édition d'un champ de profil */
+.ajax-profil_edit {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+/* Bouton validation des modifications */
+.ajax-profil_valid {
+  cursor: pointer;
+  margin-left: 4px;
+  vertical-align: middle;
+}

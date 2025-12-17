@@ -2,67 +2,156 @@
 /*** QUI EST EN LIGNE -------------- ***/
 
 .qeel {
-  background: var(--neutralDark);
-  border-radius: 5px;
-  padding: 10px;
-  display: grid;
-  grid-template-columns: 30% 40% 30%;
-  grid-gap: 1px;
-  margin-bottom: 10px;
-}
-
-.qeel>div {
   background: var(--neutral);
-  padding: 15px 10px;
+  border-radius: 6px;
+  padding: 0;
+  outline: var(--border);
+  margin: 12px;
+  box-shadow: 6px 6px var(--contrast);
+  position: relative;
 }
 
-.qeel-left {
-  border-radius: 5px 0 0 5px;
+.qeel h3 {
+  background-color: var(--accentClrLight);
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  text-transform: lowercase;
+  color: var(--textColor);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+}
+
+.qeel h3:after {
+  content: "× ";
+  padding: 0 3px;
+  margin-left: 12px;
+  outline: var(--textColor);
+  border-radius: 3px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.qeel .groups-bar {
+  display: flex;
+  background: var(--neutralDarker);
+}
+
+a.groups {
+  display: block;
+  background: var(--neutralDarker);
+  text-align: center;
+  padding: 6px 12px;
+  border-right: 1px solid var(--neutral);
+  cursor: pointer;
+  position: relative;
+  font-family: var(--altFont);
+  font-weight: normal;
+}
+
+a.groups div {
+  width: max-content;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 33;
+  left: 0;
+  z-index: 50;
+  background: var(--neutralDarker);
+  padding: 6px;
+  color: var(--textColor);
+  font-family: var(--font);
+}
+
+a.groups:hover {
+  background: var(--neutral);
+}
+
+a.groups:hover div {
+  visibility: visible;
+  opacity: 1;
+}
+
+#qeel_content {
+  display: flex;
+  padding: 0 12px;
 }
 
 /* Dernier inscrit */
 #last_user {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 12px;
 }
 
 #lastuser_avatar img {
-  width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 90px;
   object-fit: cover;
   object-position: center;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-
-/* groupes*/
-a.groups {
-  display: block;
-  background: var(--neutralDark);
-  border-radius: 5px;
-  text-align: center;
-  padding: 2px 0;
-  margin-bottom: 5px;
-  opacity: 1;
-}
-
-a.groups:hover {
-  opacity: 0.7;
-}
-
-a.groups:last-child {
+  border-radius: 6px;
   margin-bottom: 0;
+  outline: var(--border);
+  opacity: 0.5;
+  filter: sepia(0.3);
+  margin-bottom: 3px;
 }
 
-.qeel-middle {}
+#lastuser_avatar img:hover {
+  opacity: 0.7;
+  filter: sepia(0.1);
+}
 
-/*X connectés :: 1 membre, 0 invisible, 0 invité*/
-#total_users {}
+#newest_user {
+  text-align: center;
+  background-color: var(--contrastLighter);
+  padding: 3px 6px;
+  font-family: var(--altFont);
+}
 
-/*Connectés en ce moment*/
-#online_users {
+#users_window {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+#last_connected {
+  width: 60%;
   height: 95px;
   overflow: auto;
+  border-right: 6px solid var(--neutralDarker);
+  padding: 6px;
+}
+
+#online_users {
+  width: 30%;
+  height: 95px;
+  overflow: auto;
+  padding: 6px;
+}
+
+#total_posts_users {
+  padding: 3px 24px;
+  background-color: var(--contrast);
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--normal-size);
+  font-family: var(--altFont);
+  border-radius: 6px;
 }
 
 /*ne pas supprimer*/
@@ -70,15 +159,18 @@ a.groups:last-child {
   display: none;
 }
 
-.credits {
+#credits {
   font-size: var(--little-size);
   border: var(--border);
-  border-radius: 5px;
-  padding: 5px;
-  margin-top: 5px;
+  border-radius: 6px;
+  position: absolute;
+  right: -24px;
+  top: 140px;
+  background: var(--neutral);
+  width: 240px;
+  box-shadow: 6px 6px var(--contrastLighter);
 }
 
-.qeel-right {
-  border-radius: 0 5px 5px 0;
-  text-align: justify;
+#credits h3 {
+  background-color: var(--contrast);
 }

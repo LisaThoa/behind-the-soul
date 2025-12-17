@@ -18,7 +18,7 @@
   padding-top: 50px;
   opacity: 0;
   visibility: hidden;
-  transition: all ease .7s;
+  transition: all ease 0.7s;
 }
 
 /* Menu des notifications OUVERT */
@@ -72,7 +72,7 @@
     border-radius: 5px;
 
     &:hover {
-      color: var(--accentClr)
+      color: var(--accentClr);
     }
   }
 }
@@ -85,7 +85,7 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid transparent;
-  transition: border .2s;
+  transition: border 0.2s;
   animation: notiffiFadeIn 0.3s ease-in-out;
 
   /* Notification au survol */
@@ -161,7 +161,7 @@
 /* Date de la notification */
 .notif_time {
   font-size: var(--little-size);
-  opacity: .8;
+  opacity: 0.8;
   margin-top: 5px;
 }
 
@@ -175,12 +175,12 @@
   border-radius: 100px;
   aspect-ratio: 1;
   padding: 2px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 /* Affiche le bouton de suppression au survol de la notification */
 .notification:hover .notif_close {
-  opacity: 1
+  opacity: 1;
 }
 
 /* Alerte d'une notification */
@@ -195,14 +195,14 @@
   transform: translateY(100%);
   opacity: 0;
   filter: blur(5px);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .notification.alert.up {
   transform: translateY(0%);
   opacity: 1;
   filter: blur(0);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .alert_close {

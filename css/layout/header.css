@@ -70,4 +70,36 @@
 
 /* PAGE D'ACCUEIL ---*/
 .introduction {
+  padding: 0 !important;
+  box-shadow: 6px 6px var(--contrast);
+}
+
+.introduction .h3 {
+  background-color: var(--accentClrLight);
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  text-transform: lowercase;
+  color: var(--textColor);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+}
+
+.introduction .h3:after {
+  content: "× ";
+  padding: 0 3px;
+  margin-left: 12px;
+  outline: var(--textColor);
+  border-radius: 3px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.mes-txt {
+  padding: 12px;
 }

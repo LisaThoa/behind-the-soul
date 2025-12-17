@@ -2,8 +2,8 @@
  * comme les encadrés d'options, de rappel, etc... */
 .panel {
   background: var(--neutral);
-  border: var(--border);
-  border-radius: 5px;
+  outline: var(--border);
+  border-radius: 6px;
   padding: 10px;
   margin: 25px 0;
 }

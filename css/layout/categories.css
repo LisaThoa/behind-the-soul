@@ -2,8 +2,6 @@
 /*** CATEGORIES -------------------- ***/
 
 .category {
-  background: var(--neutralDark);
-  border-radius: 10px;
   margin: 0;
 }
 
@@ -18,4 +16,5 @@
   padding-right: 3px;
   border-right: 6px solid var(--textColorAccent);
   animation: var(--blinkAnimation);
+  text-transform: lowercase;
 }

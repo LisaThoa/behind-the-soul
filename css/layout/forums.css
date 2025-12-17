@@ -34,6 +34,7 @@ a.forumtitle {
   border-radius: 6px 6px 0 0;
   padding: 3px 6px;
   text-align: right;
+  text-transform: lowercase;
 }
 
 a.forumtitle:after {
@@ -83,8 +84,12 @@ a.forumtitle:hover {
   float: left;
   border-radius: 6px;
   border: var(--border);
-  opacity: 0.7;
+  opacity: 0.5;
   filter: sepia(0.5);
+}
+
+.forum_desc img:hover {
+  opacity: 0.7;
 }
 
 .forum_desc div {
@@ -112,6 +117,13 @@ a.forumtitle:hover {
   object-position: center;
   border-radius: 50%;
   position: relative;
+  filter: sepia(0.3);
+  opacity: 0.5;
+}
+
+.forum_avatar div img:hover {
+  filter: sepia(0.1);
+  opacity: 0.7;
 }
 
 /* dernier message*/
@@ -123,15 +135,19 @@ a.forumtitle:hover {
   top: 30px;
   right: 30px;
   z-index: 50;
-  background-color: var(--accentClr);
+  background-color: var(--accentClrLight);
   border-radius: 6px;
   outline: var(--border);
   padding: 6px;
 }
 
+.forum_lastpost:empty {
+  display: none;
+}
+
 .forum_avatar:hover .forum_lastpost {
   visibility: visible;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .sprite-icon_topic_latest {
@@ -159,6 +175,7 @@ a.forumtitle:hover {
   display: inline-block;
   background-color: var(--contrastLighter);
   padding: 0 3px;
+  text-transform: lowercase;
 }
 
 .forum_stats {

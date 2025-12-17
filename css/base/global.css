@@ -21,6 +21,14 @@ body {
 }
 
 .main_forum {
+  background-color: var(--neutral);
+  opacity: 0.8;
+  background-image: linear-gradient(var(--neutralDarker) 8px, transparent 8px),
+    linear-gradient(90deg, var(--neutralDarker) 8px, transparent 8px),
+    linear-gradient(var(--neutralDarker) 4px, transparent 4px),
+    linear-gradient(90deg, var(--neutralDarker) 4px, var(--neutral) 4px);
+  background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
+  background-position: -8px -8px, -8px -8px, -4px -4px, -4px -4px;
 }
 
 #page-body {
@@ -232,11 +240,9 @@ summary {
 /* Barre de gestion 
  * Contient des boutons ou des liens spéciaux */
 .links_bar {
-  padding: 10px;
-  border: var(--border);
-  border-radius: 5px;
-  margin: 25px 0;
-  clear: both;
+  display: flex;
+  justify-content: end;
+  gap: 6px;
 }
 
 /* supprime si vide */

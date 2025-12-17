@@ -15,7 +15,7 @@
 /* Notiffi CSS */
 /* Cache la toolbar défaut */
 #fa_toolbar {
-  display: none
+  display: none;
 }
 
 /* Bouton de notification */
@@ -43,7 +43,7 @@
   scale: 1;
   opacity: 1;
   aspect-ratio: 1;
-  transition: scale ease-out .2s;
+  transition: scale ease-out 0.2s;
 }
 
 /* Conteneur du nombre de notification non lues VIDE */
@@ -51,7 +51,7 @@
   position: absolute;
   scale: 0;
   opacity: 0;
-  transition: all ease-out .2s;
+  transition: all ease-out 0.2s;
 }
 
 /*** ------------------------------- ***/
@@ -69,4 +69,5 @@
  ****** PAGE PRINCIPALE, INDEX ------------------------------------------------------- ******/
 
 /* PAGE D'ACCUEIL ---*/
-.introduction {}
+.introduction {
+}

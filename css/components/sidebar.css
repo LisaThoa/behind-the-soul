@@ -13,8 +13,9 @@
   background-color: var(--contrastLighter);
   outline: 1px solid var(--textColorAccent);
   border-radius: 12px 12px 0 0;
-  width: 100%;
-  bottom:0;
+  width: calc(100% - 24px);
+  margin: 0 12px;
+  bottom: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,7 +27,7 @@
 .sidebar_top {
   display: flex;
   flex-direction: row;
-  gap: 10px
+  gap: 10px;
 }
 
 /* Conteneur de l'ascenseur
@@ -39,7 +40,7 @@
 }
 
 /* Lien de renvoi haut/bas */
-.sidebar_bottom>a {
+.sidebar_bottom > a {
   background: var(--neutralDark);
   border-radius: 5px;
   text-align: center;
@@ -75,7 +76,7 @@
   text-align: center;
   border-radius: 5px;
   color: var(--textColor);
-  padding:3px !important;
+  padding: 3px !important;
 }
 
 .color-scheme-toggle:hover {

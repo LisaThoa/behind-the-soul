@@ -11,14 +11,14 @@
   justify-content: end;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: calc(100% - 24px);
   margin: 6px 12px;
-  outline: 1px solid var(--textColorAccent);
+  outline: var(--border);
+  z-index: 999;
 }
 .navbar a[href^="/faq"],
 .navbar a[href^="/calendar"],
-.navbar a[href^="/images"]
-  {
+.navbar a[href^="/images"] {
   display: none;
 }
 
@@ -28,6 +28,8 @@ a.mainmenu {
   background: var(--neutral);
   border-radius: 6px;
   outline: 1px solid var(--textColorAccent);
+  font-weight: normal;
+  font-family: var(--altFont);
 }
 
 /* Lien navigation au survol*/

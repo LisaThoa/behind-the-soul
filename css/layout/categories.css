@@ -4,8 +4,7 @@
 .category {
   background: var(--neutralDark);
   border-radius: 10px;
-  padding: 10px;
-  margin-bottom: 25px;
+  margin: 0;
 }
 
 /* Titre d'une catégorie */
@@ -13,10 +12,10 @@
   display: inline-block;
   text-align: left;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   font-family: var(--altFont);
-  margin: 10px 0 20px;
-  padding-right:3px;
+  margin: 18px;
+  padding-right: 3px;
   border-right: 6px solid var(--textColorAccent);
-  animation: blink .5s step-end infinite alternate;
+  animation: var(--blinkAnimation);
 }

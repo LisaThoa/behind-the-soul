@@ -2,7 +2,7 @@
   box-sizing: border-box;
   scrollbar-color: var(--contrastLight);
   scrollbar-width: thin;
-  transition:0.3s;
+  transition: 0.3s;
 }
 
 body {
@@ -13,12 +13,19 @@ body {
   margin: 0 !important;
 }
 
-::-webkit-scrollbar {}
-::-webkit-scrollbar-track {}
-::-webkit-scrollbar-thumb {}
+::-webkit-scrollbar {
+}
+::-webkit-scrollbar-track {
+}
+::-webkit-scrollbar-thumb {
+}
 
 .main_forum {
+}
+
+#page-body {
   width: 940px;
+  max-width: 80%;
   margin: 20px auto;
   padding: 20px;
   border-radius: 5px;
@@ -115,18 +122,27 @@ button {
 }
 
 /* Au survol */
-:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+:hover:is(
+    input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+    .button
+  ) {
   color: var(--accentClr);
 }
 
 /* Boutons désactivés */
-:disabled:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
-  opacity: .5;
+:disabled:is(
+    input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+    .button
+  ) {
+  opacity: 0.5;
   filter: saturate(1);
   cursor: not-allowed;
 }
 
-:disabled:hover:is(input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]), .button) {
+:disabled:hover:is(
+    input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+    .button
+  ) {
   color: inherit;
 }
 

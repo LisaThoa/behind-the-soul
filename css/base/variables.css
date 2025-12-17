@@ -1,20 +1,26 @@
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 :root {
   color-scheme: light;
-  --header: url('https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png');
+  --header: url("https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png");
 
   --neutral: #fff8e8;
   --neutralDark: #fef7e5;
   --neutralDarker: #f7f0df;
 
-  --contrast: #e09d74;
-  --contrastLight: #cd9979;
-  --contrastLighter: #d3ded4;
+  --contrast: #d3bcac;
+  --contrastLight: #d4c9c2;
+  --contrastLighter: #cfddcf;
 
   --accentClr: #89bbd6;
   --accentClrDark: #de9870;
 
   --textColor: #030201;
-  --textColorAccent: #030201;
+  --textColorAccent: #4b2c0d;
 
   --border: 1px solid #030201;
 
@@ -27,12 +33,14 @@
   --title-size: 18px;
 
   --font: "Poppins";
-  --altFont: "Google Sans Code"
+  --altFont: "Google Sans Code";
+
+  --blinkAnimation: blink 0.5s step-end infinite alternate;
 }
 
 [data-color-scheme="dark"] {
   color-scheme: dark;
-  --header: url('https://images2.imgbox.com/89/30/IXFzrs0y_o.png');
+  --header: url("https://images2.imgbox.com/89/30/IXFzrs0y_o.png");
 
   --neutral: #1e212a;
   --neutralDark: #181a21;
@@ -52,5 +60,3 @@
 
   --shadowBox: 0 0 20px var(--neutralDark);
 }
-
-@keyframes blink {50% {border-color: transparent}}

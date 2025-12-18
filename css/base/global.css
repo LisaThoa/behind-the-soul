@@ -11,6 +11,7 @@ body {
   font-size: var(--normal-size);
   color: var(--textColor);
   margin: 0 !important;
+  text-align: justify;
 }
 
 ::-webkit-scrollbar {
@@ -245,6 +246,10 @@ summary {
   gap: 6px;
 }
 
+.links_bar i {
+  font-size: var(--large-size);
+}
+
 /* supprime si vide */
 .links_bar:empty {
   display: none;
@@ -262,4 +267,15 @@ a.specials_links {
 .specials_links a:empty,
 a.specials_links:empty {
   display: none;
+}
+
+#bottom {
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom a,
+.specials_links.adminlink a {
+  font-weight: normal;
+  font-family: var(--altFont);
 }

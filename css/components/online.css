@@ -132,6 +132,7 @@ a.groups:hover div {
   height: 95px;
   overflow: auto;
   border-right: 6px solid var(--neutralDarker);
+  border-bottom: 6px solid var(--neutralDarker);
   padding: 6px;
 }
 
@@ -140,6 +141,7 @@ a.groups:hover div {
   height: 95px;
   overflow: auto;
   padding: 6px;
+  border-bottom: 6px solid var(--neutralDarker);
 }
 
 #total_posts_users {
@@ -159,6 +161,15 @@ a.groups:hover div {
   display: none;
 }
 
+.qeel_legend {
+  padding: 3px 6px;
+  background-color: var(--contrastLighter);
+  display: inline;
+  font-size: var(--normal-size);
+  font-family: var(--altFont);
+  border-radius: 6px;
+}
+
 #credits {
   font-size: var(--little-size);
   border: var(--border);
@@ -167,10 +178,39 @@ a.groups:hover div {
   right: -24px;
   top: 140px;
   background: var(--neutral);
-  width: 240px;
+  width: 300px;
   box-shadow: 6px 6px var(--contrastLighter);
 }
 
 #credits h3 {
   background-color: var(--contrast);
+}
+
+#thanks_bar {
+  margin: 0;
+  background-color: var(--contrastLighter);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#thanks_bar h4 {
+  margin: 6px;
+  padding: 3px 18px;
+  border-radius: 6px;
+  background-color: var(--neutral);
+  outline: var(--border);
+  font-family: var(--altFont);
+  font-weight: normal;
+  color: var(--contrast);
+}
+
+#thanks_bar i {
+  font-size: var(--large-size);
+  color: var(--neutral);
+}
+
+#credits_content {
+  padding: 6px;
+  text-align: justify;
 }

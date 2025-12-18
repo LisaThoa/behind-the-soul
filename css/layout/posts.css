@@ -16,19 +16,24 @@
 .navigation_chain {
   font-size: 0;
   /*retire les :: de séparation */
+  display: flex;
+  align-items: center;
 }
 
 .navigation_chain a {
-  font-size: initial;
-  /*rétablit la taille des liens*/
+  font-size: var(--normal-size);
   margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-family: var(--altFont);
+  font-weight: normal;
 }
 
 .navigation_chain a:before {
-  content: "›";
+  content: "♡";
   /*symbole ou texte modifiable*/
-  font-size: var(--nomal-size);
   margin-right: 3px;
+  font-size: var(--large-size);
 }
 
 /* BOUTONS DE MESSAGE : Répondre, Nouveau,... ---* 
@@ -171,6 +176,6 @@
   display: none;
 }
 
-.expanded~.sort-form {
+.expanded ~ .sort-form {
   display: block;
 }

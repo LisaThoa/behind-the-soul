@@ -27,8 +27,14 @@
     </div>
 
     <div id="users_window">
-      <div id="last_connected">{L_CONNECTED_MEMBERS}<br /></div>
-      <div id="online_users">{LOGGED_IN_USER_LIST}</div>
+      <div id="last_connected">
+        <div class="qeel_legend">seen</div>
+        {L_CONNECTED_MEMBERS}<br />
+      </div>
+      <div id="online_users">
+        <div class="qeel_legend">online</div>
+        {LOGGED_IN_USER_LIST}
+      </div>
       <div id="total_posts_users">
         {TOTAL_POSTS}<i class="bi bi-chat-square-text"></i> {TOTAL_USERS}
         <i class="bi bi-people"></i>

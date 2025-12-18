@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   /* grid-template: auto / 1fr 1fr; */
-  gap: 12px;
+  gap: 18px;
   justify-content: center;
 }
 
@@ -38,11 +38,9 @@ a.forumtitle {
 }
 
 a.forumtitle:after {
-  content: "× ";
+  content: "×";
   padding: 0 3px;
   margin-left: 12px;
-  outline: var(--border);
-  border-radius: 3px;
   height: 16px;
   display: flex;
   align-items: center;
@@ -128,6 +126,7 @@ a.forumtitle:hover {
 
 /* dernier message*/
 .forum_lastpost {
+  min-width: 90px;
   width: max-content;
   position: absolute;
   visibility: hidden;
@@ -135,9 +134,7 @@ a.forumtitle:hover {
   top: 30px;
   right: 30px;
   z-index: 50;
-  background-color: var(--accentClrLight);
-  border-radius: 6px;
-  outline: var(--border);
+  background-color: var(--contrastLighter);
   padding: 6px;
 }
 

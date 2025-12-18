@@ -11,15 +11,35 @@
 }
 
 .profile_avatar {
-  width: 200px;
+  width: 218px;
+  height: 338px;
+  padding: 12px;
+  background-color: var(--neutralDarker);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.profile_infos {}
+.profile_avatar .online_tag {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+.profile_avatar img {
+  border-radius: 6px;
+}
+
+.profile_infos {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .profile_contact {
   display: flex;
   gap: 5px;
-  float: right;
+  width: 100%;
 }
 
 .profile_content {
@@ -35,7 +55,7 @@
 }
 
 .profile_field label,
-.profile_field label>span {
+.profile_field label > span {
   font-weight: 600;
   color: var(--link);
 }

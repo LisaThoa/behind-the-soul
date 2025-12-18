@@ -8,8 +8,8 @@
  * (réutilisé dans l'affichage d'un sujet (viewtopic_body)) */
 .navigation_links {
   display: flex;
-  justify-content: space-between;
-  margin: 10px 0;
+  justify-content: end;
+  margin: 12px 0;
 }
 
 /* chaîne de lien de navigation : catégorie > forum > sous-fo */
@@ -64,42 +64,90 @@
   font-size: var(--normal-size);
 }
 
+.forum_utils a {
+  background: var(--contrastLight);
+  padding: 3px 12px;
+  margin: 6px;
+  opacity: 1;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
+}
+
 /*** ------------------------------- ***/
 /*** LISTE DES SUJETS -------------- ***/
 
-/* Bloc de description du forum */
-.forum-page_desc {
-  margin: 0 0 20px;
+.topics_container {
   background: var(--neutral);
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 6px;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrast);
+  margin: 12px;
+}
+
+.topics_container h1 {
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  background-color: var(--contrast);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--neutral);
+  margin: 0;
+}
+
+.topics_container h1:after {
+  content: "×";
+  padding: 0 3px;
+  margin-left: 12px;
+  height: 16px;
+  display: flex;
+  align-items: center;
 }
 
 /* Conteneur sujet dans la liste */
 .topicslist_row {
   background: var(--neutral);
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
+  padding: 6px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
+  border-bottom: 3px solid var(--neutralDarker);
 }
 
 .topicslist_row:last-child {
-  margin-bottom: 0;
-}
-
-/* Image du sujet */
-.topicslist-img {
-  width: 50px;
-  height: 50px;
-  background: var(--neutralDark);
+  border-bottom: 0;
 }
 
 .topicslist_infos {
   flex-grow: 100;
+  padding: 0 12px;
+}
+
+.topicslist_infos i {
+  padding: 0 6px;
+  font-size: var(--medium-size);
+}
+
+.topic-type {
+  background: var(--contrast);
+  padding: 3px 6px;
+  margin: 6px;
+}
+
+.topic_type * {
+  font-family: var(--altFont);
+  font-weight: normal;
+}
+
+.topic-type:empty {
+  display: none;
 }
 
 /*titre du sujet*/
@@ -128,33 +176,64 @@
 }
 
 .topicslist-stats {
-  text-align: right;
+  text-align: center;
+}
+
+.topicslist-stats * {
+  background: var(--contrastLight);
+  padding: 3px 12px;
+  margin: 6px;
+  opacity: 1;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
 }
 
 .topicslist-avatar-lastpost img {
   object-fit: cover;
   object-position: center;
-  width: 50px;
-  height: 50px;
-  background: var(--neutralDark);
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: var(--neutralDarker);
+  opacity: 0.5;
+  filter: sepia(0.5);
+}
+
+.topicslist-avatar-lastpost img:hover {
+  opacity: 0.7;
+  filter: sepia(0.3);
 }
 
 .topicslist-lastpost {
   width: 180px;
+  text-align: center;
+}
+
+.topicslist-lastpost a span strong,
+.topic-author a span strong {
+  font-family: var(--altFont);
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.topicslist-lastpost span div {
+  background: var(--contrast);
+  padding: 3px 12px;
+  opacity: 1;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
 }
 
 .topicslist-description {
-  border-top: 1px solid var(--neutralDark);
-  padding-top: 5px;
-  width: 100%;
+  padding: 0 6px;
+  font-size: var(--little-size);
 }
 
 /* ligne qui séparent les annonces et les notes des autres sujets (à activer dans "message > configuration") */
 .topic_separator {
-  height: 5px;
-  background: var(--neutral);
-  margin-bottom: 10px;
-  border-radius: 5px;
+  border-bottom: 3px solid var(--neutral);
 }
 
 /* Bouton "trier les sujets" */

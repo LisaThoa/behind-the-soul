@@ -1,23 +1,22 @@
 /*** ------------------------------- ***/
 /*** PAGINATIONS -------------------- ***/
 
-.pagination {}
+.pagination {
+  margin: 0 3px;
+}
 
 /*lien unique vers les pages numérotées*/
 .pagination span a {
-  font-size: var(--little-size);
-}
-
-/*survol des liens uniques des pages*/
-.pagination span a:hover {
-  font-weight: 600;
+  background-color: var(--neutralDarker);
+  border-radius: 3px;
+  padding: 1px 3px;
 }
 
 /*lien actif : page sur laquelle vous vous trouvez */
 .pagination span strong {
-  background-color: var(--neutralDark);
+  background-color: var(--contrastLighter);
   border-radius: 3px;
-  padding: 1px 4px;
+  padding: 1px 3px;
 }
 
 /*suppression de l'image-lien "aller à la page suivante" */

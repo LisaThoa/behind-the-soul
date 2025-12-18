@@ -15,10 +15,20 @@ body {
 }
 
 ::-webkit-scrollbar {
-}
-::-webkit-scrollbar-track {
+  width: 9px;
+  border-radius: 5px;
+  background: var(--neutralDarker);
 }
 ::-webkit-scrollbar-thumb {
+  background: var(--neutral);
+}
+::-webkit-scrollbar-track {
+  background: var(--neutral);
+}
+
+::selection {
+  background-color: var(--contrast);
+  color: var(--neutral);
 }
 
 .main_forum {

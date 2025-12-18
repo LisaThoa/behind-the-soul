@@ -69,7 +69,6 @@ a.forumtitle:hover {
 /*description du forum*/
 .forum_desc {
   flex: 1;
-  height: 90px;
   width: calc(100% - 66px);
   overflow: auto;
   align-self: center;

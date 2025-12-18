@@ -1,6 +1,39 @@
 /****** ------------------------------------------------------------------------------
  ****** AFFICHAGE D'UN SUJET --------------------------------------------------------- ******/
 
+.topic_container {
+  background: var(--neutral);
+  border-radius: 6px;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrast);
+  margin: 12px;
+}
+
+.topic_container h1 {
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  background-color: var(--contrast);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--neutral);
+  margin: 0;
+}
+
+.topic_container h1:after {
+  content: "×";
+  padding: 0 3px;
+  margin-left: 12px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
 /* PARTICIPANTS DU SUJET ---*/
 
 /* Conteneur de la liste des participants au sujet */
@@ -103,7 +136,7 @@ ul.profile-icons li {
 
 /* Cache les boutons pour les invités */
 .profile-icons a[href=""] {
-  display: none
+  display: none;
 }
 
 /*hover d'un bouton d'édition*/
@@ -138,7 +171,8 @@ ul.profile-icons li:hover {
 }
 
 /* Texte "j'aime" */
-button.rep-button .like_text {}
+button.rep-button .like_text {
+}
 
 /*compteur de like*/
 button.rep-button .rep-nb {
@@ -164,7 +198,7 @@ a.fa-mention {
 
 /* Mention "en ligne" */
 .presence {
-  display: none
+  display: none;
 }
 
 .presence.online {
@@ -299,7 +333,8 @@ a.fa-mention {
 /*** TEXTES, BALISES, ETC ---------- ***/
 
 /* Lien-tag des utilisateurs */
-.mentiontag {}
+.mentiontag {
+}
 
 /* BALISES DE MESSAGE : spoiler, code, quote... */
 
@@ -347,7 +382,8 @@ div.cont_code {
 }
 
 /* Spoiler */
-.hidebox.spoiler {}
+.hidebox.spoiler {
+}
 
 /* spoiler fermé */
 .spoiler_content {

@@ -43,8 +43,8 @@ body {
 }
 
 #page-body {
-  width: 940px;
-  max-width: 80%;
+  width: 960px;
+  max-width: 90%;
   margin: 20px auto;
   padding: 20px;
   border-radius: 5px;

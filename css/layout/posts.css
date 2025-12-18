@@ -39,11 +39,12 @@
 /* BOUTONS DE MESSAGE : Répondre, Nouveau,... ---* 
  * (réutilisé dans l'affichage d'un sujet (viewtopic_body) et les MP (privmsgs_body) */
 .buttons {
-  background: var(--neutralDark);
-  padding: 1px 8px;
-  margin-right: 5px;
-  border-radius: 5px;
+  background: var(--contrastLighter);
+  padding: 3px 12px;
+  margin: 6px;
   opacity: 1;
+  font-family: var(--altFont);
+  font-weight: normal;
 }
 
 .buttons:hover {

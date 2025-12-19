@@ -25,8 +25,20 @@ const SETTINGS_PROFILE = {
       fields: ["messages"],
     },
     {
+      target: ".target-faceclaim",
+      fields: ["faceclaim"],
+    },
+    {
       target: ".target-inscription",
       fields: ["date-d-inscription"],
+    },
+    {
+      target: ".under_avatar",
+      fields: ["gif", "credits", "triggers", "warnings", "multicomptes"],
+    },
+    {
+      target: ".post_userprofile",
+      fields: ["age", "activite", "statut"],
     },
   ],
 };

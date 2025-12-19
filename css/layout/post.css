@@ -146,7 +146,7 @@ div.post_row:last-of-type {
   padding: 10px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid var(--neutralDark);
   width: 100%;
   position: relative;
@@ -210,10 +210,6 @@ ul.profile-icons li:hover {
   background: var(--var(--contrastLighter));
 }
 
-/* Texte "j'aime" */
-button.rep-button .like_text {
-}
-
 /*compteur de like*/
 button.rep-button .rep-nb {
   margin-left: 5px;
@@ -232,6 +228,7 @@ button.rep-button .rep-nb {
   flex-direction: column;
   gap: 3px;
   opacity: 0.6;
+  padding: 0 18px;
 }
 
 .post_pseudo:hover {
@@ -241,6 +238,11 @@ button.rep-button .rep-nb {
 .post_pseudo div {
   display: flex;
   gap: 1px;
+}
+
+.post_pseudo div:last-child {
+  font-style: italic;
+  font-size: var(--little-size);
 }
 
 .post_pseudo .target-pseudo {
@@ -261,6 +263,127 @@ button.rep-button .rep-nb {
   font-size: var(--little-size);
 }
 
+.post_character_name a strong {
+  font-family: var(--altFont);
+  font-size: var(--title-size);
+  font-weight: normal;
+  text-transform: lowercase;
+  margin: 0 24px;
+}
+
+.post_avatar {
+  background-color: var(--neutralDark);
+  padding: 6px;
+  position: relative;
+}
+
+.under_avatar {
+  background-color: var(--contrastLighter);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.under_avatar:hover {
+  opacity: 0.9;
+}
+
+.user_field.field-gif {
+  width: 180px;
+  height: 120px;
+  background-color: var(--contrast);
+  padding: 6px;
+}
+
+.user_field.field-gif img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.3);
+}
+
+.target-faceclaim {
+  position: absolute;
+  bottom: 3px;
+  right: 9px;
+  background-color: var(--neutral);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-style: italic;
+}
+
+.post_contact {
+  display: flex;
+  gap: 3px;
+  margin: 3px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.post_userprofile {
+  gap: 3px;
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  margin: 6px;
+  padding: 6px;
+  flex-wrap: wrap;
+  height: 180px;
+  overflow: auto;
+  background-color: var(--neutralDark);
+}
+
+.post_profile h4 {
+  margin: 6px;
+  text-align: center;
+  background: var(--contrastLighter);
+  text-transform: lowercase;
+  font-family: var(--altFont);
+  font-weight: normal;
+}
+
+.field-age::before {
+  content: "age";
+  background: var(--accentClrLight);
+  padding: 3px 6px;
+  font-family: var(--altFont);
+  font-weight: normal;
+  color: var(--neutral);
+  margin-right: 3px;
+}
+
+.field-activite::before {
+  content: "activite";
+  background: var(--contrast);
+  padding: 3px 6px;
+  font-family: var(--altFont);
+  font-weight: normal;
+  color: var(--neutral);
+  margin-right: 3px;
+}
+
+.field-statut::before {
+  content: "statut";
+  background: var(--contrastLighter);
+  padding: 3px 6px;
+  font-family: var(--altFont);
+  font-weight: normal;
+  color: var(--neutral);
+  margin-right: 3px;
+}
+
 /* Lien "@" de mention */
 a.fa-mention {
   cursor: pointer;
@@ -273,11 +396,10 @@ a.fa-mention {
 
 .presence.online {
   display: inline-block;
-  position: relative;
-  background-color: var(--neutralDarker);
-  border-radius: 5px;
-  padding: 0 5px;
-  margin: 0 auto;
+}
+
+.presence i {
+  font-size: var(--large-size);
 }
 
 /* RECOMPENSES --- */

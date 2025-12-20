@@ -64,7 +64,9 @@
   font-size: var(--normal-size);
 }
 
-.forum_utils a {
+.forum_utils a,
+.specials_links a,
+a.specials_links {
   background: var(--contrastLight);
   padding: 3px 12px;
   margin: 6px;
@@ -211,7 +213,9 @@
 }
 
 .topicslist-lastpost a span strong,
-.topic-author a span strong {
+.topic-author a span strong,
+.topicslist-lastpost a,
+.topic-author a {
   font-family: var(--altFont);
   font-weight: normal;
   text-transform: lowercase;

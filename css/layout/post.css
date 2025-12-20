@@ -263,6 +263,7 @@ button.rep-button .rep-nb {
   font-size: var(--little-size);
 }
 
+.post_character_name a,
 .post_character_name a strong {
   font-family: var(--altFont);
   font-size: var(--title-size);
@@ -285,13 +286,22 @@ button.rep-button .rep-nb {
   top: 0;
   left: 0;
   opacity: 0;
-  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 6px;
   justify-content: center;
   align-items: center;
   overflow: auto;
+}
+
+.under_avatar_content {
+  width: 90%;
+  height: 90%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
 }
 
 .under_avatar:hover {
@@ -303,6 +313,7 @@ button.rep-button .rep-nb {
   height: 120px;
   background-color: var(--contrast);
   padding: 6px;
+  margin-bottom: 6px;
 }
 
 .user_field.field-gif img {
@@ -310,6 +321,40 @@ button.rep-button .rep-nb {
   height: 100%;
   object-fit: cover;
   filter: sepia(0.3);
+}
+
+.user_field.field-credits,
+.user_field.field-triggers,
+.user_field.field-warnings,
+.user_field.field-multicomptes {
+  width: 100%;
+  text-align: justify;
+  display: inline;
+}
+
+.user_field.field-credits::before,
+.user_field.field-triggers::before,
+.user_field.field-warnings::before,
+.user_field.field-multicomptes::before {
+  background: var(--contrast);
+  padding: 3px 6px;
+  font-family: var(--altFont);
+  font-weight: normal;
+  color: var(--neutral);
+  margin-right: 3px;
+}
+
+.user_field.field-credits::before {
+  content: "crédits";
+}
+.user_field.field-triggers::before {
+  content: "triggers";
+}
+.user_field.field-warnings::before {
+  content: "warnings";
+}
+.user_field.field-multicomptes::before {
+  content: "multicomptes";
 }
 
 .target-faceclaim {
@@ -464,11 +509,23 @@ a.fa-mention {
 .quickreply {
   display: flex;
   justify-content: center;
+  background-color: transparent;
 }
 
 /* Retire le cadre de la réponse rapide pour les invités */
 #quickreply_content:empty {
   display: none;
+}
+
+.jumpbox label,
+.quickmod label {
+  background: var(--contrastLight);
+  padding: 3px 12px;
+  margin: 6px;
+  opacity: 1;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
 }
 
 /*** ------------------------------- ***/

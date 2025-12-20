@@ -33,7 +33,7 @@ const SETTINGS_PROFILE = {
       fields: ["date-d-inscription"],
     },
     {
-      target: ".under_avatar",
+      target: ".under_avatar_content",
       fields: ["gif", "credits", "triggers", "warnings", "multicomptes"],
     },
     {

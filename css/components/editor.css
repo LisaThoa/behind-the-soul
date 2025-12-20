@@ -1,6 +1,46 @@
 /*** ------------------------------- ***/
 /*** EDITEUR DE TEXTE -------------- ***/
 /* Editeur de texte */
+
+.container_post_form {
+  background: var(--neutral);
+  border-radius: 6px;
+  margin: 0;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrastLighter);
+  padding-bottom: 6px;
+}
+
+.container_post_form h1 {
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  background-color: var(--contrast);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--neutral);
+  margin: 0;
+}
+
+.container_post_form h1:after {
+  content: "×";
+  padding: 0 3px;
+  margin-left: 12px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+#postingbox {
+  margin: 0;
+  outline: none;
+}
+
 .sceditor-container {
   border: var(--border) !important;
   background-color: var(--neutral) !important;
@@ -50,7 +90,7 @@ a.sceditor-button {
 }
 
 .sceditor-container textarea:focus {
-  outline: none
+  outline: none;
 }
 
 /*Boîte Smiley*/

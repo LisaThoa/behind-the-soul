@@ -131,12 +131,13 @@ input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
 .button,
 button {
   font-size: var(--normal-size);
-  padding: 10px 15px !important;
-  border-radius: 5px;
-  background: var(--neutralDarker);
-  color: var(--contrastLight);
-  font-weight: 600;
+  padding: 3px 12px !important;
+  border-radius: 6px;
+  background: var(--accentClr);
+  color: var(--neutral);
+  font-weight: normal;
   border: none;
+  font-family: var(--altFont);
 }
 
 /* Au survol */
@@ -174,11 +175,11 @@ button {
 
 /* MENUS DEROULANTS --- */
 select {
-  background: transparent;
+  background: var(--neutralDark);
   border: var(--border);
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: var(--normal-size);
-  padding: 8px 10px;
+  padding: 1px 12px;
   color: var(--textColor);
 }
 

@@ -108,21 +108,55 @@ h3,
 /*** --------------------------------------- ***/
 /*** BOUTONS D'INTERACTION ET BARRE DE TEXTE ***/
 
+label {
+  display: flex;
+  align-items: center;
+}
+
 /* CHAMPS DE TEXTE ---*/
 input:is([type="text"], [type="password"], .inputbox),
 textarea {
   border: none;
-  border-radius: 5px;
   background: var(--neutralDark);
   font-size: var(--normal-size);
-  color: var(--contrastLight) !important;
   padding: 8px 10px;
 }
 
 /* Au focus */
 :focus:is(input:is([type="text"], [type="password"], .inputbox), textarea) {
   outline: none;
-  border: 1px solid var(--accentClr);
+  border: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--contrast);
+  margin: 0;
+  font: inherit;
+  color: var(--contrast);
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--contrast);
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before,
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--contrastLighter);
+}
+
+input[type="checkbox"]:checked::before,
+input[type="radio"]:checked::before {
+  transform: scale(1);
 }
 
 /* BOUTONS D'INTERACTION --- *

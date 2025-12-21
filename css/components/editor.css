@@ -2,7 +2,8 @@
 /*** EDITEUR DE TEXTE -------------- ***/
 /* Editeur de texte */
 
-.container_post_form {
+.container_post_form,
+.panel_post_options {
   background: var(--neutral);
   border-radius: 6px;
   margin: 0;
@@ -41,21 +42,38 @@
   outline: none;
 }
 
+#postingbox label,
+label[for="modif_topic_title"] {
+  background: var(--contrast);
+  padding: 3px 6px;
+  margin: 6px;
+  font-family: var(--altFont);
+}
+
+#postingbox input {
+  width: 100%;
+}
+
 .sceditor-container {
   border: var(--border) !important;
   background-color: var(--neutral) !important;
+  border-radius: 0 !important;
+  color: var(--textColor) !important;
 }
 
 /* Barre d'outils de l'éditeur de texte*/
 div.sceditor-toolbar {
-  background: var(--neutral) !important;
-  border-bottom: var(--border) !important;
+  background: var(--neutralDark) !important;
+  border-bottom: none !important;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* Conteneur des groupes d'outils */
 div.sceditor-group {
   background: var(--neutralDark) !important;
-  border-bottom: var(--border) !important;
+  border-bottom: none !important;
 }
 
 /* Bouton d'un outil */
@@ -113,7 +131,52 @@ body#sce_smilies_body {
 /* Prévisualisation d'un message */
 #preview {
   background: var(--neutral);
-  padding: 10px;
-  border: var(--border);
-  border-radius: 5px;
+  margin: 12px auto;
+  max-width: 700px;
+}
+
+#preview .content {
+  border-radius: 6px;
+  outline: var(--border);
+  padding: 24px;
+}
+
+#preview .h3 {
+  background: var(--contrast);
+  padding: 3px 6px;
+  margin: 6px;
+  font-family: var(--altFont);
+  display: inline-block;
+  color: var(--neutral);
+}
+
+.panel_post_options {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+
+#list_dice {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.panel_post_options .fields1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+.panel_post_options .fields2 {
+  grid-column: 2;
+  grid-row: 1/3;
+  margin: 6px;
+  width: 100%;
+}
+
+.panel_post_options .fields2 label {
+  display: flex;
+}
+.panel_post_options .fields2 br {
+  display: none;
+}
+.panel_post_options .fields2 div {
+  display: flex;
 }

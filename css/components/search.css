@@ -12,7 +12,7 @@
   background: var(--neutral);
 }
 
-.post_search>div {
+.post_search > div {
   padding: 10px;
 }
 
@@ -50,7 +50,6 @@
   border: var(--border);
   padding: 10px;
   position: fixed !important;
-  top: 50% !important;
 }
 
 /* Bouton rechercher */

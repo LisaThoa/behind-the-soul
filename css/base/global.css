@@ -79,12 +79,12 @@ a:hover {
 /* Utilisé pour des titres de pages */
 h1,
 h1.page-title {
-  color: var(--contrastLight);
   margin: 10px 0 20px;
   font-size: var(--title-size);
-  font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  font-family: var(--altFont);
+  color: var(--contrast);
 }
 
 /* Utilisé pour des titres de sujets, blogs... */

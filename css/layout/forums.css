@@ -16,6 +16,7 @@
   width: calc(50% - 24px);
   outline: var(--border);
   box-shadow: 6px 6px var(--contrastLighter);
+  padding-bottom: 6px;
 }
 
 .forum:last-child {
@@ -51,9 +52,8 @@ a.forumtitle:hover {
 }
 
 .forum_content {
-  display: box;
+  display: flex;
   gap: 6px;
-  align-items: center;
   padding: 6px;
   border-radius: 0 0 6px 6px;
   position: relative;
@@ -69,14 +69,14 @@ a.forumtitle:hover {
 /*description du forum*/
 .forum_desc {
   flex: 1;
-  width: calc(100% - 66px);
+  width: calc(100% - 120px);
   overflow: auto;
   align-self: center;
 }
 
 .forum_desc img {
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 120px;
   object-fit: cover;
   float: left;
   border-radius: 6px;
@@ -90,21 +90,23 @@ a.forumtitle:hover {
 }
 
 .forum_desc div {
-  max-height: 90px;
+  max-height: 120px;
   overflow: auto;
-  padding: 6px;
+  padding: 0 6px;
 }
 
 /*conteneur avatar du dernier posteur*/
 .forum_avatar {
-  width: 60px;
+  width: 120px;
   height: 60px;
   float: right;
   border-radius: 50%;
-  position: absolute;
-  top: 6px;
-  right: 6px;
-  background-color: var(--neutralDarker);
+}
+
+.forum_avatar div {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
 }
 
 .forum_avatar div img {
@@ -116,6 +118,7 @@ a.forumtitle:hover {
   position: relative;
   filter: sepia(0.3);
   opacity: 0.5;
+  margin-bottom: 3px;
 }
 
 .forum_avatar div img:hover {
@@ -125,25 +128,24 @@ a.forumtitle:hover {
 
 /* dernier message*/
 .forum_lastpost {
-  min-width: 90px;
-  width: max-content;
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  top: 30px;
-  right: 30px;
-  z-index: 50;
+  width: 100%;
   background-color: var(--contrastLighter);
   padding: 6px;
 }
 
-.forum_lastpost:empty {
-  display: none;
+.forum_lastpost span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: var(--little-size);
 }
 
-.forum_avatar:hover .forum_lastpost {
-  visibility: visible;
-  opacity: 1;
+.forum_lastpost span a {
+  font-family: var(--altFont);
+}
+
+.forum_lastpost:empty {
+  display: none;
 }
 
 .sprite-icon_topic_latest {

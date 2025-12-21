@@ -323,3 +323,31 @@ a.specials_links:empty {
   font-weight: normal;
   font-family: var(--altFont);
 }
+
+.openable_item {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+.openable_item div {
+  display: none;
+  width: max-content;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  bottom: -32px;
+  left: 0;
+  z-index: 50;
+  background: var(--neutralDarker);
+  padding: 6px;
+  color: var(--textColor);
+  font-family: var(--font);
+}
+
+.openable_item:hover div {
+  visibility: visible;
+  opacity: 1;
+}

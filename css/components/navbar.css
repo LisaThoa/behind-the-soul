@@ -5,13 +5,15 @@
 .navbar {
   background: var(--contrast);
   border-radius: 6px;
-  padding: 12px;
+  padding: 3px 12px;
   top: 0;
   width: calc(100% - 24px);
   margin: 6px 12px;
   outline: var(--border);
   z-index: 999;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar ul {
@@ -20,11 +22,22 @@
   justify-content: end;
 }
 
-.navbar a[href^="/faq"],
-.navbar a[href^="/calendar"],
-.navbar a[href^="/search"],
-.navbar a[href^="/images"] {
+.navbar ul > li:first-child,
+.navbar ul li:has(> a[href^="/faq"]),
+.navbar ul li:has(> a[href^="/calendar"]),
+.navbar ul li:has(> a[href^="/search"]),
+.navbar ul li:has(> a[href^="/images"]) {
   display: none;
+}
+
+.navbar div {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar div a i {
+  color: var(--neutral);
+  font-size: var(--title-size);
 }
 
 /* liens de navigation */

@@ -72,15 +72,12 @@
   display: none;
 }
 
-.navbar form {
-  margin: auto;
-}
-
 .navbar input[name="search_keywords"] {
   padding: 3px 6px;
   margin: auto;
   border-radius: 6px;
   outline: var(--border);
+  font-size: var(--little-size);
 }
 
 .navbar input[type="submit"] {

@@ -148,9 +148,14 @@ a.forumtitle:hover {
   display: none;
 }
 
-.sprite-icon_topic_latest {
+.sprite-icon_topic_latest,
+.sprite-icon_topic_newest {
   max-width: 6px;
   max-height: 6px;
+}
+
+.lastpost br {
+  display: none;
 }
 
 .forum_details {

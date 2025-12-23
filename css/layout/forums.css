@@ -140,7 +140,7 @@ a.forumtitle:hover {
   font-size: var(--little-size);
 }
 
-.forum_lastpost span a:first-child {
+.forum_lastpost span *:not(.last-post-icon) {
   font-family: var(--altFont);
   width: 100%;
   display: block;

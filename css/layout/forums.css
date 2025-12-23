@@ -140,8 +140,12 @@ a.forumtitle:hover {
   font-size: var(--little-size);
 }
 
-.forum_lastpost span a {
+.forum_lastpost span a:first-child {
   font-family: var(--altFont);
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: normal;
 }
 
 .forum_lastpost:empty {

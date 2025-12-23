@@ -1,0 +1,58 @@
+.groups_container,
+.groups_desc {
+  background: var(--neutral);
+  border-radius: 6px;
+  margin: 0;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrast);
+  padding-bottom: 6px;
+}
+
+.groups_container h1,
+.groups_desc h1 {
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  background-color: var(--contrast);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--neutral);
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.groups_container h1:after,
+.groups_desc h1:after {
+  content: "×";
+  padding: 0 3px;
+  margin-left: 12px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.groups_container .inner,
+.groups_desc .inner {
+  padding: 12px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.groups_desc .inner input[type="text"] {
+  padding: 3px 6px;
+  margin: auto;
+  border-radius: 6px;
+  outline: var(--border);
+}
+
+.groups_desc table {
+  width: max-content !important;
+  min-width: 600px;
+}

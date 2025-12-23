@@ -48,9 +48,10 @@ label[for="modif_topic_title"] {
   padding: 3px 6px;
   margin: 6px;
   font-family: var(--altFont);
+  font-weight: normal;
 }
 
-#postingbox input {
+#postingbox input[type="text"] {
   width: 100%;
 }
 

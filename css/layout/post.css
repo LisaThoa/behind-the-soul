@@ -158,7 +158,8 @@ div.post_row:last-of-type {
 
 /* BOUTONS D'EDITION DU MESSAGE --- */
 /* Conteneur boutons d'édition */
-ul.profile-icons {
+ul.profile-icons,
+ul.mp-icons {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -168,12 +169,14 @@ ul.profile-icons {
 }
 
 /*UN SEUL bouton d'édition */
-ul.profile-icons li {
+ul.profile-icons li,
+ul.mp-icons li {
   padding: 2px 4px;
   border-radius: 5px;
 }
 
-ul.profile-icons li a i {
+ul.profile-icons li a i,
+ul.mp-icons li a i {
   font-size: var(--title-size);
 }
 
@@ -183,7 +186,8 @@ ul.profile-icons li a i {
 }
 
 /*hover d'un bouton d'édition*/
-ul.profile-icons li:hover {
+ul.profile-icons li:hover,
+ul.mp-icons li:hover {
   background: var(--neutralDark);
 }
 
@@ -272,10 +276,17 @@ button.rep-button .rep-nb {
   margin: 0 24px;
 }
 
-.post_avatar {
+.post_avatar,
+.message_profil {
   background-color: var(--neutralDark);
   padding: 6px;
   position: relative;
+}
+
+.post_avatar img,
+.message_profil img {
+  width: 200px;
+  height: 320px;
 }
 
 .under_avatar {

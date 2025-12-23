@@ -23,6 +23,8 @@
   text-align: right;
   text-transform: lowercase;
   color: var(--neutral);
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .userlist_container h1:after {
@@ -34,10 +36,29 @@
   align-items: center;
 }
 
+.userlist_container div {
+  display: flex;
+}
+
+.userlist_container div .links_bar form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 12px;
+  gap: 6px;
+  justify-content: start;
+}
+
+.userlist_container div .links_bar form input[type="text"] {
+  padding: 3px 6px;
+  border-radius: 6px;
+  outline: var(--border);
+}
+
 .userlist {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
+  flex-wrap: wrap;
+  max-height: 70%;
+  overflow: auto;
 }
 
 .userlist_profil {
@@ -50,13 +71,38 @@
 }
 
 .userlist_avatar {
+  flex-direction: column;
+  align-items: center;
+}
+
+.userlist_avatar span {
+  text-align: center;
+  background-color: var(--contrastLighter);
+  padding: 3px 6px;
+}
+
+.userlist_avatar span a,
+.userlist_avatar span a strong {
+  font-family: var(--altFont);
+  font-weight: normal;
 }
 
 .userlist_avatar img {
-  width: 75px;
-  height: 120px;
+  width: 120px;
+  height: 90px;
   object-fit: cover;
   object-position: center;
+  border-radius: 6px;
+  margin-bottom: 0;
+  outline: var(--border);
+  opacity: 0.5;
+  filter: sepia(0.3);
+  margin-bottom: 3px;
+}
+
+.userlist_avatar img:hover {
+  opacity: 0.7;
+  filter: sepia(0.1);
 }
 
 .userlist_details {
@@ -66,7 +112,12 @@
   font-size: var(--medium-size);
 }
 
-.userlist_infos {
+.userlist_details .userlist_infos {
+  display: inline;
+}
+
+.userlist_details .userlist_infos * {
+  margin: 3px;
 }
 
 .userlist_contact {

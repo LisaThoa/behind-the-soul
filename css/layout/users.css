@@ -1,6 +1,39 @@
 /*** ------------------------------- ***/
 /*** LISTE DES MEMBRES ------------- ***/
 
+.userlist_container {
+  background: var(--neutral);
+  border-radius: 6px;
+  margin: 0;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrast);
+  padding-bottom: 6px;
+}
+
+.userlist_container h1 {
+  font-size: var(--large-size);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: var(--altFont);
+  font-weight: normal;
+  background-color: var(--contrast);
+  border-radius: 6px 6px 0 0;
+  padding: 3px 6px;
+  text-align: right;
+  text-transform: lowercase;
+  color: var(--neutral);
+}
+
+.userlist_container h1:after {
+  content: "×";
+  padding: 0 3px;
+  margin-left: 12px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
 .userlist {
   display: grid;
   grid-template-columns: auto auto;
@@ -16,7 +49,8 @@
   border-radius: 5px;
 }
 
-.userlist_avatar {}
+.userlist_avatar {
+}
 
 .userlist_avatar img {
   width: 75px;
@@ -25,12 +59,15 @@
   object-position: center;
 }
 
-.userlist_details {}
+.userlist_details {
+}
 
 .userlist_pseudo {
   font-size: var(--medium-size);
 }
 
-.userlist_infos {}
+.userlist_infos {
+}
 
-.userlist_contact {}
+.userlist_contact {
+}

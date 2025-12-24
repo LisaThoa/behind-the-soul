@@ -108,9 +108,11 @@ h3,
 /*** --------------------------------------- ***/
 /*** BOUTONS D'INTERACTION ET BARRE DE TEXTE ***/
 
-label {
+label:has(input[type="radio"]),
+label:has(input[type="checkbox"]) {
   display: flex;
   align-items: center;
+  gap: 3px;
 }
 
 /* CHAMPS DE TEXTE ---*/

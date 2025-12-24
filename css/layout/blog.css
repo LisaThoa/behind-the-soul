@@ -1,0 +1,36 @@
+#blog_comments > div {
+  max-width: 700px;
+  margin: 6px auto;
+  background-color: var(--neutral);
+}
+
+.postbody,
+.commentbody {
+  position: relative;
+  display: flex;
+}
+
+.blog_profile {
+  display: flex;
+  margin: 6px;
+}
+
+.blog_profile img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.blog_profile .poster_avatar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 120px;
+}
+
+.commentbody .author {
+  display: flex;
+  gap: 3px;
+}

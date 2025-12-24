@@ -43,21 +43,22 @@
   color-scheme: dark;
   --header: url("https://images2.imgbox.com/89/30/IXFzrs0y_o.png");
 
-  --neutral: #1e212a;
-  --neutralDark: #181a21;
-  --neutralDarker: #313543;
+  --neutral: #20201e;
+  --neutralDark: #2b2927;
+  --neutralDarker: #2b2927;
 
-  --contrast: #e5e5f0;
-  --contrastLight: #f4f4f4;
-  --contrastLighter: #40485e;
+  --contrast: #47403a;
+  --contrastLight: #383533;
+  --contrastLighter: #323d32;
 
-  --accentClr: #7583ff;
-  --accentClrDark: #333c92;
+  --accentClr: #4b748b;
+  --accentClrLight: #455c68;
+  --accentClrDark: #302017;
 
-  --textColor: #c7c5cd;
-  --textColorAccent: #e5e5f0;
+  --textColor: #d3a97f;
+  --textColorAccent: #a17c5a;
 
-  --border: 1px solid #2b2e3b;
+  --border: 1px solid #a08871;
 
-  --shadowBox: 0 0 20px var(--neutralDark);
+  --shadowBox: 0 0 20px #a09386;
 }

@@ -40,6 +40,10 @@ const SETTINGS_PROFILE = {
       target: ".post_userprofile",
       fields: ["age", "activite", "statut"],
     },
+    {
+      target: ".target-internet-id",
+      fields: ["internet-id"],
+    },
   ],
 };
 

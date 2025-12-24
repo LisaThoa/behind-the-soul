@@ -13,6 +13,7 @@
   border-radius: 6px;
   margin: 0;
   min-width: 420px;
+  min-height: 180px;
   width: calc(50% - 24px);
   outline: var(--border);
   box-shadow: 6px 6px var(--contrastLighter);

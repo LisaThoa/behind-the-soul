@@ -249,7 +249,8 @@ button.rep-button .rep-nb {
   font-size: var(--little-size);
 }
 
-.post_pseudo .target-pseudo {
+.post_pseudo .target-pseudo,
+.target-internet-id {
   font-family: var(--altFont);
   font-weight: normal;
   text-transform: lowercase;

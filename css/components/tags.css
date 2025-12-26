@@ -2,9 +2,11 @@
 /*** PROFILS SIMPLIFIÉS DES TAGS ---- ***/
 
 /* Supression de la flèche peu esthétique*/
-.tooltipster-arrow {}
+.tooltipster-arrow {
+}
 
-.tooltipster-default {}
+.tooltipster-default {
+}
 
 .preview_content {
   display: flex;
@@ -13,9 +15,9 @@
 .preview_avatar img {
   object-fit: cover;
   object-position: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 

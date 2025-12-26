@@ -34,7 +34,14 @@ const SETTINGS_PROFILE = {
     },
     {
       target: ".under_avatar_content",
-      fields: ["gif", "credits", "triggers", "warnings", "multicomptes"],
+      fields: [
+        "gif",
+        "points",
+        "credits",
+        "triggers",
+        "warnings",
+        "multicomptes",
+      ],
     },
     {
       target: ".post_userprofile",

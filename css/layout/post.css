@@ -347,6 +347,7 @@ button.rep-button .rep-nb {
   filter: sepia(0.3);
 }
 
+.user_field.field-points,
 .user_field.field-credits,
 .user_field.field-triggers,
 .user_field.field-warnings,
@@ -356,6 +357,7 @@ button.rep-button .rep-nb {
   display: inline;
 }
 
+.user_field.field-points::before,
 .user_field.field-credits::before,
 .user_field.field-triggers::before,
 .user_field.field-warnings::before,
@@ -368,6 +370,9 @@ button.rep-button .rep-nb {
   margin-right: 3px;
 }
 
+.user_field.field-points::before {
+  content: "points";
+}
 .user_field.field-credits::before {
   content: "crédits";
 }

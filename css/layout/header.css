@@ -4,14 +4,15 @@
   background-attachment: fixed;
   width: 100%;
   height: 900px;
-  max-height: 100vh;
+  max-height: 90vh;
   display: block;
 }
 
 #header > div {
   width: 960px;
   max-width: 90%;
-  height: inherit;
+  height: 900px;
+  max-height: 90vh;
   margin: auto;
   position: relative;
 }
@@ -23,11 +24,45 @@
   bottom: 42px;
   right: 30px;
   color: var(--accentClrLight);
+  z-index: 10;
+  background: linear-gradient(
+    90deg,
+    var(--accentClrLight),
+    var(--contrastLighter),
+    var(--accentClrLight)
+  );
+  background-size: 300% 100%;
+
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  display: inline-block;
 }
 
 #header #header_title > span {
   font-family: var(--accentFont);
   color: var(--accentClr);
+}
+
+#header #header_title_back {
+  font-size: 9em;
+  font-family: var(--titleFont);
+  position: absolute;
+  bottom: 42px;
+  right: 30px;
+  color: var(--neutral);
+  z-index: 9;
+}
+
+#header #header_subtitle {
+  font-size: 2em;
+  font-family: var(--altFont);
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: var(--contrast);
+  z-index: 8;
 }
 
 /****** ------------------------------------------------------------------------------ 

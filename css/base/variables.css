@@ -6,6 +6,7 @@
 
 :root {
   color-scheme: light;
+  --backgroundHeader: url("https://images2.imgbox.com/2f/4f/AXqjVUCV_o.png");
   --header: url("https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png");
 
   --neutral: #fff8e8;
@@ -35,6 +36,8 @@
 
   --font: "Poppins";
   --altFont: "Google Sans Code";
+  --titleFont: "Jersey 10";
+  --accentFont: "Permanent Marker";
 
   --blinkAnimation: blink 0.5s step-end infinite alternate;
 }

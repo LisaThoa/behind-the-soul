@@ -47,6 +47,7 @@
 .profile_messages {
   display: flex;
   gap: 5px;
+  margin: auto;
   width: max-content;
   height: fit-content;
   align-items: center;

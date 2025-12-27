@@ -458,6 +458,37 @@ button.rep-button .rep-nb {
   margin-right: 3px;
 }
 
+.post_contact a img {
+  display: none;
+}
+
+.post_contact a::before {
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  font-size: var(--title-size);
+  font-weight: normal;
+  margin: 3px;
+  padding: 3px;
+  background-color: var(--contrastLighter);
+  border-radius: 6px;
+}
+
+.post_contact a:nth-of-type(1)::before {
+  content: "\F32F";
+}
+
+.post_contact a:nth-of-type(2)::before {
+  content: "\F4D4";
+}
+
+.post_contact a:nth-of-type(3)::before {
+  content: "\F609";
+}
+
+.post_contact a:nth-of-type(4)::before {
+  content: "\F42A";
+}
+
 /* Lien "@" de mention */
 a.fa-mention {
   cursor: pointer;

@@ -212,6 +212,12 @@ a.specials_links {
   text-align: center;
 }
 
+.topicslist-lastpost span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .topicslist-lastpost a span strong,
 .topic-author a span strong,
 .topicslist-lastpost a,

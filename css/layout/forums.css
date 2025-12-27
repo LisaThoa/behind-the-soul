@@ -153,10 +153,30 @@ a.forumtitle:hover {
   display: none;
 }
 
-.sprite-icon_topic_latest,
-.sprite-icon_topic_newest {
-  max-width: 6px;
-  max-height: 6px;
+a > img.sprite-icon_topic_latest,
+a.last-post-icon > img.sprite-icon_topic_latest,
+a > img.sprite-icon_topic_newest {
+  display: none;
+}
+
+a:has(> img.sprite-icon_topic_latest)::before,
+a:has(> img.sprite-icon_topic_newest)::before {
+  content: "\F134";
+  font-family: "bootstrap-icons";
+  font-size: var(--medium-size);
+  display: inline-block;
+}
+
+img[title="Vous avez posté dans ce sujet."] {
+  display: none;
+}
+
+div:has(img[title="Vous avez posté dans ce sujet."]) a.topictitle::before {
+  content: "\F914";
+  font-family: "bootstrap-icons";
+  font-size: var(--little-size);
+  display: inline-block;
+  margin-right: 3px;
 }
 
 .lastpost br {

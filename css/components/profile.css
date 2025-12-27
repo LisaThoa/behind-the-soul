@@ -27,19 +27,29 @@
   right: -6px;
 }
 
-.profile_avatar img {
-  border-radius: 6px;
-}
-
 .profile_infos {
   display: flex;
   flex-wrap: wrap;
 }
 
-.profile_contact {
+.profile_infos i {
+  font-weight: normal;
+  font-size: var(--title-size);
+  margin: 0 3px;
+  border-radius: 6px;
+}
+
+.profile_avatar img {
+  border-radius: 6px;
+}
+
+.profile_contact,
+.profile_messages {
   display: flex;
   gap: 5px;
-  width: 100%;
+  width: max-content;
+  height: fit-content;
+  align-items: center;
 }
 
 .profile_content {
@@ -107,4 +117,61 @@
   cursor: pointer;
   margin-left: 4px;
   vertical-align: middle;
+}
+
+.profile_contact a img {
+  display: none;
+}
+
+.profile_contact div:has(#i_icon_email) {
+  display: none;
+}
+
+.profile_contact a::before {
+  font-family: "bootstrap-icons";
+  display: inline-block;
+  font-size: var(--title-size);
+  font-weight: normal;
+  margin: 3px;
+  padding: 3px;
+  background-color: var(--contrastLighter);
+  border-radius: 6px;
+}
+
+.profile_contact div:nth-of-type(1) a::before {
+  content: "\F32F";
+}
+
+.profile_contact div:nth-of-type(3) a::before {
+  content: "\F4D4";
+}
+
+.profile_contact div:nth-of-type(4) a::before {
+  content: "\F609";
+}
+
+.profile_contact div:nth-of-type(5) a::before {
+  content: "\F42A";
+}
+
+.online_tag {
+  visibility: hidden;
+}
+
+.online_tag::after {
+  content: "\F1D2";
+  font-family: "bootstrap-icons";
+  visibility: visible;
+  font-size: var(--title-size);
+  font-weight: normal;
+  color: var(--contrast);
+}
+
+.profile_content div.field_uneditable img {
+  width: 180px;
+  height: 120px;
+  background-color: var(--contrast);
+  padding: 6px;
+  margin-bottom: 6px;
+  object-fit: cover;
 }

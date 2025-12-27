@@ -43,7 +43,7 @@ div#tabs li:nth-child(5) {
 }
 
 /* EDITER SIGNATURE ---*/
-#parent_editor_simple>#smiley-box {
+#parent_editor_simple > #smiley-box {
   float: left;
   /* float: right; -- pour smileys à droite */
 }
@@ -53,11 +53,11 @@ div#tabs li:nth-child(5) {
   /* margin-right: XXXpx -- pour smileys à droite */
 }
 
-#parent_editor_simple #message-box>br {
+#parent_editor_simple #message-box > br {
   display: none;
 }
 
-#parent_editor_simple #message-box>#textarea_content {
+#parent_editor_simple #message-box > #textarea_content {
   width: 100% !important;
 }
 

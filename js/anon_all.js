@@ -1,5 +1,3 @@
-const SPECIAL_FORUMS = ["7"];
-
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".forum").forEach((forum) => {
     const titleLink = forum.querySelector(".forumtitle");

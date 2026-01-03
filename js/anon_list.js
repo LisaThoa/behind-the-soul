@@ -1,5 +1,3 @@
-const SPECIAL_FORUMS = ["7"];
-
 document.addEventListener("DOMContentLoaded", () => {
   if (!isSpecialForum()) return;
   document.querySelectorAll(".forum").forEach((forum) => {

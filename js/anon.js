@@ -1,5 +1,3 @@
-const SPECIAL_FORUMS = ["7"];
-
 const SPECIAL_REMOVE = [
   ".post_profile",
   ".btn-quote",

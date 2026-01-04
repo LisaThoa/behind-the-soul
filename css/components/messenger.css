@@ -41,7 +41,7 @@
   transition-duration: 700ms;
   grid-template-columns: 100%;
   border-radius: 60px 60px 0 0;
-  outline: 3px solid var(--textColorAccent);
+  outline: 2px solid var(--textColorAccent);
   padding: 54px 36px 0 36px;
 }
 
@@ -320,8 +320,7 @@
 }
 
 .FAM-inline-buttons {
-  margin: 0 0 0 15px !important;
-  width: 6%;
+  display: flex;
 }
 
 .FAM-inline-buttons .FAM-button {
@@ -827,6 +826,7 @@ strong.FAM-page-link {
   width: 100%;
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .FAM-my-msg .FAM-msg-text {

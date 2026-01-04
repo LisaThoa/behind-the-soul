@@ -36,6 +36,7 @@
         topic_type: ".topic-type > strong",
         // Un post
         post: ".post_row",
+        post_topic: ".module",
         // Avatar du post
         post_avatar: ".post_avatar img",
         // Pseudo de l'auteur du post
@@ -199,7 +200,10 @@
 
         // get the page
         FAM.request = $.get(url, function (data) {
-          var a = $(FAM.select[type == "topic" ? "post" : "forumtitle"], data),
+          var a = $(
+              FAM.select[type == "topic" ? "post_topic" : "forumtitle"],
+              data
+            ),
             form = type == "topic" ? $('form[action="/post"]', data)[0] : null,
             i = 0,
             j = a.length,

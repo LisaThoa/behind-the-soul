@@ -425,8 +425,6 @@
 
                   FAM.message.edit.placeholderSettings = {
                     id: "FAM-msg-editing",
-                    avatar: caller.querySelector(".FAM-msg-avatar").innerHTML,
-                    username: caller.querySelector(".FAM-msg-name").innerHTML,
                     notMine: caller.className.indexOf("FAM-my-msg") == -1,
                   };
 
@@ -482,8 +480,6 @@
 
                 placeholderSettings: {
                   id: "FAM-msg-placeholder",
-                  avatar: FAM.message.edit.placeholderSettings.avatar,
-                  username: FAM.message.edit.placeholderSettings.username,
                   notMine: FAM.message.edit.placeholderSettings.notMine,
                 },
               });
@@ -520,9 +516,6 @@
             " " +
             (data.id || "");
           msg.innerHTML =
-            '<div class="FAM-msg-avatar">' +
-            (data.avatar || _userdata.avatar) +
-            "</div>" +
             '<div class="FAM-msg-box">' +
             '<div class="FAM-msg-name">' +
             (data.username || "") +
@@ -634,7 +627,7 @@
                   // update message replacement
                   if (msgData.replacement) {
                     $.get(success.href, function (data) {
-                      var post = $(FAM.select.post + form.p.value, data)[0];
+                      var post = $(".post--" + form.p.value, data)[0];
 
                       if (post) {
                         placeholder.insertAdjacentHTML(
@@ -899,13 +892,6 @@
             " " +
             post.className.replace(/.*?(post--\d+).*/, "$1") +
             '">' +
-            '<div class="FAM-msg-avatar">' +
-            (pLink ? pLink : "") +
-            '<img src="' +
-            (avatar ? avatar.src : "https://2img.net/i/fa/empty.gif") +
-            '" alt="avatar">' +
-            (pLink ? "</a>" : "") +
-            "</div>" +
             '<div class="FAM-msg-box" title="' +
             (date
               ? date.innerHTML
@@ -950,13 +936,6 @@
               : "") +
             "</div>" +
             '<div class="FAM-msg-actions">' +
-            (quote
-              ? '<span class="FAM-msg-button FAM-quote-button" onclick="FAM.message.interact(this, \'' +
-                quote.href +
-                '\');" title="' +
-                FAM.lang.tooltip_msg_quote +
-                '"><i class="bi bi-reply-fill"></i></span>'
-              : "") +
             (edit
               ? '<span class="FAM-msg-button FAM-edit-button" onclick="FAM.message.interact(this, \'' +
                 edit.href +
@@ -974,15 +953,6 @@
             "</div>" +
             "</div>" +
             '<div class="FAM-msg-info">' +
-            '<div class="FAM-msg-name">' +
-            '<span class="FAM-name-mention" onclick="FAM.message.mention(this);">' +
-            (pLink ? pLink : "").replace("<a", '<a onclick="return false;"') +
-            (group ? group : "") +
-            name +
-            (group ? "</strong></span>" : "") +
-            (pLink ? "</a>" : "") +
-            "</span>" +
-            "</div>" +
             '<div class="FAM-msg-date">' +
             (date
               ? date.innerHTML
@@ -1525,11 +1495,6 @@
               '<i class="bi bi-chat-fill"></i>' +
               FAM.lang.topic_name +
               "</div>" +
-              '<div class="FAM-chat-avatar">' +
-              '<img src="' +
-              (avatar ? avatar.src : "https://2img.net/i/fa/empty.gif") +
-              '" alt="avatar">' +
-              "</div>" +
               '<div class="FAM-chat-content">' +
               '<div class="FAM-chat-title">' +
               forumtitle.innerText +
@@ -1958,7 +1923,6 @@
           chat.className = FAM.config.embed ? "FAM-embedded" : "";
           chat.dataset.hidden = FAM.config.embed ? false : true;
           chat.innerHTML =
-            '<div id="FAM-screen">' +
             '<div id="FAM-toolbar">' +
             '<div id="FAM-toolbar-inner">' +
             '<span id="FAM-back" class="FAM-toolbar-button" onclick="FAM.history.back()" style="display:none" title="' +
@@ -1976,6 +1940,7 @@
             '<div id="FAM-tabs"></div>' +
             '<div id="FAM-tab-add" onclick="FAM.tab.add()"><i class="bi bi-plus"></i></div>' +
             "</div>" +
+            '<div id="FAM-screen">' +
             '<div class="FAM-container-content">' +
             '<div id="FAM-content" onscroll="FAM.message.read(this);"></div>' +
             "</div>" +

@@ -7,7 +7,7 @@
 :root {
   color-scheme: light;
   --backgroundHeader: url("https://images2.imgbox.com/2f/4f/AXqjVUCV_o.png");
-  --header: url("https://images2.imgbox.com/e5/fb/TTqPoDcu_o.png");
+  --header: url("https://images2.imgbox.com/04/6b/6T3kIBFJ_o.png");
 
   --neutral: #fff8e8;
   --neutralDark: #f7efdc;
@@ -44,7 +44,6 @@
 
 [data-color-scheme="dark"] {
   color-scheme: dark;
-  --header: url("https://images2.imgbox.com/89/30/IXFzrs0y_o.png");
 
   --neutral: #20201e;
   --neutralDark: #2b2927;

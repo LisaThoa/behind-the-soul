@@ -15,6 +15,32 @@
   max-height: 90vh;
   margin: auto;
   position: relative;
+  display: flex;
+}
+
+#header_img {
+  background: var(--header);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 420px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+#header_mask {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#header_paint {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 #header #header_title {

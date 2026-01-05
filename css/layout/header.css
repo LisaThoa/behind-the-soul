@@ -20,14 +20,17 @@
 
 #header_img {
   background: var(--header);
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 600px;
-  height: 420px;
+  width: 540px;
+  height: 360px;
   margin: auto;
   position: relative;
   overflow: hidden;
+  border-radius: 6px;
+  outline: var(--border);
+  box-shadow: 6px 6px var(--contrastLighter);
 }
 
 #header_mask {
@@ -36,11 +39,22 @@
   pointer-events: none;
 }
 
-#header_paint {
+#header_character {
+  background: var(--header-character);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
+  width: 540px;
+  height: 480px;
+}
+
+#header_img span#header_tags {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  gap: 6px;
+  margin: 12px;
 }
 
 #header #header_title {

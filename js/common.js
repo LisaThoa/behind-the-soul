@@ -14,7 +14,7 @@ resize();
 window.addEventListener("resize", resize);
 
 // couche opaque au départ
-ctx.fillStyle = styles.getPropertyValue("--neutral");
+ctx.fillStyle = styles.getPropertyValue("--neutralDarker");
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // réglages pinceau
@@ -27,7 +27,7 @@ let t = 0;
 function animate() {
   // on "referme" progressivement le masque
   ctx.globalCompositeOperation = "source-over";
-  const hex = styles.getPropertyValue("--neutral").trim();
+  const hex = styles.getPropertyValue("--neutralDarker").trim();
 
   // conversion hex → rgba
   const r = parseInt(hex.slice(1, 3), 16);

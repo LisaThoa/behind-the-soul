@@ -85,3 +85,7 @@
   border-radius: 6px;
   font-size: var(--little-size);
 }
+
+.navbar form[action="/search"] {
+  display: flex;
+}

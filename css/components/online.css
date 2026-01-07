@@ -144,6 +144,10 @@ a.groups:hover div {
   border-bottom: 6px solid var(--neutralDarker);
 }
 
+#online_users span {
+  margin: 0 3px;
+}
+
 #total_posts_users {
   padding: 3px 24px;
   background-color: var(--contrast);

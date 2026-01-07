@@ -39,6 +39,7 @@
   --altFont: "Google Sans Code";
   --titleFont: "Jersey 10";
   --accentFont: "Permanent Marker";
+  --pixelFont: "Pixelify Sans";
 
   --blinkAnimation: blink 0.5s step-end infinite alternate;
 }

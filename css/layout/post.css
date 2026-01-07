@@ -559,6 +559,10 @@ a.fa-mention {
   padding: 25px;
 }
 
+.post_message > div {
+  width: 100%;
+}
+
 /* REPONSE RAPIDE --- */
 /*supression de la mention "réponse rapide" */
 .quickreply div.h3 {

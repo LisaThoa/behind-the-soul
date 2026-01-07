@@ -6,7 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const match = titleLink.getAttribute("href")?.match(/^\/f(\d+)(?:-|$)/);
 
     if (match && SPECIAL_FORUMS.includes(match[1])) {
-      forum.querySelectorAll(".forum_avatar").forEach((el) => el.remove());
+      forum
+        .querySelectorAll(".forum_avatar img[alt='avatar']")
+        .forEach((el) => el.remove());
+      forum
+        .querySelectorAll(".forum_avatar .gensmall")
+        .forEach((el) => el.remove());
     }
   });
 });

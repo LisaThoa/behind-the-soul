@@ -13,3 +13,120 @@ bubble {
   font-family: var(--altFont);
   font-weight: normal;
 }
+
+maintitle {
+  font-family: var(--pixelFont);
+  font-size: 42px;
+  color: var(--accentClr);
+}
+
+smalltitle {
+  font-family: var(--altFont);
+  font-size: var(--title-size);
+  color: var(--contrast);
+}
+
+subtitle {
+  color: var(--contrast);
+  font-family: var(--altFont);
+  font-size: var(--medium-size);
+}
+
+box {
+  background: var(--neutral);
+  border-radius: 6px;
+  margin: 0;
+  outline: var(--border);
+  box-shadow: 3px 3px var(--contrastLighter);
+  padding: 6px;
+  display: block;
+}
+
+sp1 {
+  background: var(--contrastLighter);
+  padding: 3px 12px;
+  margin: 3px;
+  opacity: 1;
+  font-family: var(--altFont);
+  font-weight: normal;
+}
+
+sp2 {
+  font-size: var(--normal-size);
+  padding: 3px 12px !important;
+  border-radius: 6px;
+  background: var(--accentClr);
+  color: var(--neutral);
+  font-weight: normal;
+  border: none;
+  font-family: var(--altFont);
+  margin: 3px;
+}
+
+sp3 {
+  background: var(--contrast);
+  padding: 3px 12px;
+  margin: 3px;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
+  border-radius: 5px;
+}
+
+sp4 {
+  background: var(--contrastLight);
+  padding: 3px 12px;
+  margin: 3px;
+  font-family: var(--altFont);
+  font-size: var(--little-size);
+  font-weight: normal;
+}
+
+i1 {
+  font-style: italic;
+  color: var(--accentClr);
+}
+
+i2 {
+  font-style: italic;
+  color: var(--textColorAccent);
+}
+
+i3 {
+  font-style: italic;
+  color: var(--contrast);
+}
+
+b1 {
+  font-weight: bold;
+  color: var(--accentClr);
+}
+
+b2 {
+  font-weight: bold;
+  color: var(--textColorAccent);
+}
+
+b3 {
+  font-weight: bold;
+  color: var(--contrast);
+}
+
+pixel {
+  font-family: var(--pixelFont);
+  font-size: 13px;
+}
+
+arty {
+  font-family: var(--accentFont);
+  font-size: 13px;
+}
+
+boxy {
+  font-family: var(--titleFont);
+  font-size: 14px;
+}
+
+term {
+  font-family: var(--altFont);
+}

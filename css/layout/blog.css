@@ -4,8 +4,8 @@
   background-color: var(--neutral);
 }
 
-.postbody,
-.commentbody {
+.topic_container .postbody,
+#blog_comments .commentbody {
   position: relative;
   display: flex;
 }

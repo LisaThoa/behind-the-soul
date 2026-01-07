@@ -1,7 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   if (!isSpecialForum()) return;
   document.querySelectorAll(".forum").forEach((forum) => {
-    forum.querySelectorAll(".forum_avatar").forEach((el) => el.remove());
+    forum
+      .querySelectorAll(".forum_avatar img[alt='avatar']")
+      .forEach((el) => el.remove());
+    forum
+      .querySelectorAll(".forum_avatar .gensmall")
+      .forEach((el) => el.remove());
   });
   document.querySelectorAll(".topicslist_row").forEach((row) => {
     row.querySelectorAll(".lastpostavatar").forEach((el) => el.remove());

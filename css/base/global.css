@@ -12,18 +12,20 @@ body {
   color: var(--textColor);
   margin: 0 !important;
   text-align: justify;
+  letter-spacing: 0.2px;
 }
 
 ::-webkit-scrollbar {
   width: 9px;
-  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
   background: var(--neutralDarker);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--neutral);
-}
-::-webkit-scrollbar-track {
-  background: var(--neutral);
+  border-radius: 5px;
 }
 
 ::selection {

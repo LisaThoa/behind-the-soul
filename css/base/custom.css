@@ -33,12 +33,12 @@ subtitle {
 }
 
 box {
-  background: var(--neutral);
+  background: var(--neutralDarker);
   border-radius: 6px;
-  margin: 0;
+  margin: 12px;
   outline: var(--border);
   box-shadow: 3px 3px var(--contrastLighter);
-  padding: 6px;
+  padding: 24px 36px;
   display: block;
 }
 

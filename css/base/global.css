@@ -142,7 +142,6 @@ input[type="checkbox"],
 input[type="radio"] {
   -webkit-appearance: none;
   appearance: none;
-  background-color: var(--contrast);
   margin: 0;
   font: inherit;
   color: var(--contrast);
@@ -161,7 +160,7 @@ input[type="radio"]::before {
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--contrastLighter);
+  box-shadow: inset 1em 1em var(--accentClrLight);
 }
 
 input[type="checkbox"]:checked::before,

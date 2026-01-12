@@ -19,6 +19,7 @@ document.addEventListener("fa.pagination.complete", runCleaner);
 function runCleaner() {
   let selectorsToRemove = isSpecialForum() ? SPECIAL_REMOVE : NORMAL_REMOVE;
   cleanSpecialForum(selectorsToRemove);
+  displayFieldsContainers();
 }
 
 function isSpecialForum() {
@@ -32,4 +33,13 @@ function cleanSpecialForum(selectorsToRemove) {
   selectorsToRemove.forEach((selector) => {
     document.querySelectorAll(selector).forEach((el) => el.remove());
   });
+}
+
+function displayFieldsContainers() {
+  document
+    .querySelectorAll(".post_details")
+    .forEach((el) => (el.style.visibility = "visible"));
+  document
+    .querySelectorAll(".post_profile")
+    .forEach((el) => (el.style.visibility = "visible"));
 }

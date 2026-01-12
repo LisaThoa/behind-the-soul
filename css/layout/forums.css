@@ -153,6 +153,10 @@ a.forumtitle:hover {
   display: none;
 }
 
+.forum_lastpost:has(a:empty) {
+  visibility: hidden;
+}
+
 a > img.sprite-icon_topic_latest,
 a.last-post-icon > img.sprite-icon_topic_latest,
 a > img.sprite-icon_topic_newest {

@@ -150,6 +150,7 @@ div.post_row:last-of-type {
   border-bottom: 1px solid var(--neutralDark);
   width: 100%;
   position: relative;
+  visibility: hidden;
 }
 
 .post_date {
@@ -225,6 +226,7 @@ button.rep-button .rep-nb {
 .post_profile {
   padding: 10px;
   border-right: 1px solid var(--neutralDark);
+  visibility: hidden;
 }
 
 .post_pseudo {

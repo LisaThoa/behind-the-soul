@@ -36,12 +36,21 @@ body {
 .main_forum {
   background-color: var(--neutral);
   opacity: 0.8;
-  background-image: linear-gradient(var(--neutralDarker) 8px, transparent 8px),
+  background-image:
+    linear-gradient(var(--neutralDarker) 8px, transparent 8px),
     linear-gradient(90deg, var(--neutralDarker) 8px, transparent 8px),
     linear-gradient(var(--neutralDarker) 4px, transparent 4px),
     linear-gradient(90deg, var(--neutralDarker) 4px, var(--neutral) 4px);
-  background-size: 200px 200px, 200px 200px, 40px 40px, 40px 40px;
-  background-position: -8px -8px, -8px -8px, -4px -4px, -4px -4px;
+  background-size:
+    200px 200px,
+    200px 200px,
+    40px 40px,
+    40px 40px;
+  background-position:
+    -8px -8px,
+    -8px -8px,
+    -4px -4px,
+    -4px -4px;
 }
 
 #page-body {
@@ -118,12 +127,14 @@ label:has(input[type="checkbox"]) {
 }
 
 /* CHAMPS DE TEXTE ---*/
-input:is([type="text"], [type="password"], .inputbox),
+input:is([type="text"], [type="password"], [type="number"], .inputbox),
 textarea {
   border: none;
   background: var(--neutralDark);
   font-size: var(--normal-size);
-  padding: 8px 10px;
+  padding: 3px 6px;
+  margin: auto;
+  border-radius: 6px;
 }
 
 /* Au focus */
@@ -153,6 +164,10 @@ input[type="radio"] {
   place-content: center;
 }
 
+input[type="radio"] {
+  border-radius: 50%;
+}
+
 input[type="checkbox"]::before,
 input[type="radio"]::before {
   content: "";
@@ -161,6 +176,10 @@ input[type="radio"]::before {
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   box-shadow: inset 1em 1em var(--accentClrLight);
+}
+
+input[type="radio"]::before {
+  border-radius: 50%;
 }
 
 input[type="checkbox"]:checked::before,
@@ -185,17 +204,17 @@ button {
 
 /* Au survol */
 :hover:is(
-    input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
-    .button
-  ) {
+  input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+  .button
+) {
   color: var(--accentClr);
 }
 
 /* Boutons désactivés */
 :disabled:is(
-    input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
-    .button
-  ) {
+  input:is([type="submit"], [type="button"], [type="hidden"], [type="reset"]),
+  .button
+) {
   opacity: 0.5;
   filter: saturate(1);
   cursor: not-allowed;

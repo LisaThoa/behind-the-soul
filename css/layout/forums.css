@@ -158,13 +158,14 @@ a.forumtitle:hover {
 }
 
 a > img.sprite-icon_topic_latest,
-a.last-post-icon > img.sprite-icon_topic_latest,
+a.last-post-icon > img,
 a > img.sprite-icon_topic_newest {
   display: none;
 }
 
 a:has(> img.sprite-icon_topic_latest)::before,
-a:has(> img.sprite-icon_topic_newest)::before {
+a:has(> img.sprite-icon_topic_newest)::before,
+a.last-post-icon:has(> img)::before {
   content: "\F134";
   font-family: "bootstrap-icons";
   font-size: var(--medium-size);

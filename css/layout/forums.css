@@ -160,7 +160,7 @@ a.forumtitle:hover {
 a > img.sprite-icon_topic_latest,
 a.last-post-icon > img,
 a > img.sprite-icon_topic_newest {
-  display: none;
+  display: none !important;
 }
 
 a:has(> img.sprite-icon_topic_latest)::before,

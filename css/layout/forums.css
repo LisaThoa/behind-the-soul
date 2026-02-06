@@ -110,7 +110,7 @@ a.forumtitle:hover {
   gap: 3px;
 }
 
-.forum_avatar div img {
+.forum_avatar > div > img {
   width: 60px;
   height: 60px;
   object-fit: cover;

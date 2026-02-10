@@ -1,4 +1,4 @@
-* {
+html {
   box-sizing: border-box;
   scrollbar-color: var(--contrastLight);
   scrollbar-width: thin;
@@ -16,16 +16,17 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--neutralDarker);
+  background: var(--neutral);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--neutral);
-  border-radius: 5px;
+  background: var(--contrastLighter);
+  border-radius: 0px !important;
+  border: 3px solid;
 }
 
 ::selection {

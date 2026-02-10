@@ -1,0 +1,31 @@
+.tabs_list {
+  display: flex;
+  gap: 6px;
+  margin: 12px;
+}
+.tab-trigger {
+  cursor: pointer;
+  padding: 6px 12px;
+}
+.tab-trigger.active {
+  background: var(--contrastLighter);
+}
+.tab-pane {
+  animation: fadeIn 0.3s;
+}
+.tab-pane > div {
+  text-align: justify;
+}
+.tabs {
+  max-height: 420px;
+  overflow: auto;
+  padding: 3px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

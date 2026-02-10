@@ -1,7 +1,5 @@
-html {
+* {
   box-sizing: border-box;
-  scrollbar-color: var(--contrastLight);
-  scrollbar-width: thin;
   transition: 0.3s;
 }
 
@@ -13,6 +11,11 @@ body {
   margin: 0 !important;
   text-align: justify;
   letter-spacing: 0.2px;
+}
+
+html {
+  scrollbar-color: var(--contrastLighter);
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {

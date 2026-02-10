@@ -112,6 +112,18 @@ b3 {
   color: var(--contrast);
 }
 
+u1 {
+  border-bottom: 1px solid var(--accentClr);
+}
+
+u2 {
+  border-bottom: 1px solid var(--textColorAccent);
+}
+
+u3 {
+  border-bottom: 1px solid var(--contrast);
+}
+
 pixel {
   font-family: var(--pixelFont);
   font-size: 13px;

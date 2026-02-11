@@ -41,6 +41,10 @@
   --accentFont: "Permanent Marker";
   --pixelFont: "Pixelify Sans";
 
+  --groupNew: #8fbd8f;
+  --groupOld: #ce8155;
+  --groupLost: #817d79;
+
   --blinkAnimation: blink 0.5s step-end infinite alternate;
 }
 

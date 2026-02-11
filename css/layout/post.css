@@ -141,6 +141,11 @@ div.post_row:last-of-type {
   border-bottom: none;
 }
 
+.post img {
+  max-width: 90%;
+  max-height: 60%;
+}
+
 .post_details {
   grid-column: 1 / span 2;
   padding: 10px;

@@ -19,12 +19,14 @@ function fillFields(form) {
   for (let element of elements) {
     if (element.type === "submit") {
       submitButton = element;
-    } else if (element.nodeName === "LABEL") {
+    }
+    if (element.nodeName === "LABEL") {
       let children = element.children;
       for (const child of children) {
-        if (child.nodeName === "INPUT") element = child;
+        if (child.ønodeName === "INPUT") element = child;
       }
-    } else if (
+    }
+    if (
       (element.nodeName === "INPUT" || element.nodeName === "TEXTAREA") &&
       element.type !== "submit"
     ) {

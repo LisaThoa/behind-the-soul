@@ -15,14 +15,16 @@ function fillFields(form) {
   }
 
   let elements = form.children;
+  let submitButton = null;
   for (let element of elements) {
-    if (element.nodeName === "LABEL") {
+    if (element.type === "submit") {
+      submitButton = element;
+    } else if (element.nodeName === "LABEL") {
       let children = element.children;
       for (const child of children) {
         if (child.nodeName === "INPUT") element = child;
       }
-    }
-    if (
+    } else if (
       (element.nodeName === "INPUT" || element.nodeName === "TEXTAREA") &&
       element.type !== "submit"
     ) {
@@ -31,7 +33,18 @@ function fillFields(form) {
     }
   }
   let htmlCode = document.getElementById(form.dataset.resultId);
-  navigator.clipboard.writeText(htmlCode.outerHTML);
+  navigator.clipboard.writeText(htmlCode.outerHTML).then(() => {
+    if (submitButton) {
+      const originalText = submitButton.value;
+      submitButton.value = "Copied !";
+      submitButton.disabled = true;
+
+      setTimeout(() => {
+        submitButton.value = originalText;
+        submitButton.disabled = false;
+      }, 2000);
+    }
+  });
 }
 
 function fillField(targetField, element) {

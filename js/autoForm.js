@@ -6,36 +6,30 @@ document.addEventListener("submit", (e) => {
 });
 
 function fillFields(form) {
-  let targetContainer = document.getElementById(
-    form.dataset.resultId,
-  )?.children;
+  let resultContainer = document.getElementById(form.dataset.resultId);
+  if (!resultContainer) return;
+
+  let targetElements = resultContainer.children;
   let targets = [];
-  for (const target of targetContainer) {
+  for (const target of targetElements) {
     targets[target.id] = target;
   }
 
-  let elements = form.children;
+  let elements = form.elements;
   let submitButton = null;
+
   for (let element of elements) {
     if (element.type === "submit") {
       submitButton = element;
+      continue;
     }
-    if (element.nodeName === "LABEL") {
-      let children = element.children;
-      for (const child of children) {
-        if (child.ønodeName === "INPUT") element = child;
-      }
-    }
-    if (
-      (element.nodeName === "INPUT" || element.nodeName === "TEXTAREA") &&
-      element.type !== "submit"
-    ) {
-      let targetField = targets[element.name];
-      fillField(targetField, element);
+
+    if (element.name && targets[element.name]) {
+      fillField(targets[element.name], element);
     }
   }
-  let htmlCode = document.getElementById(form.dataset.resultId);
-  navigator.clipboard.writeText(htmlCode.outerHTML).then(() => {
+
+  navigator.clipboard.writeText(resultContainer.outerHTML).then(() => {
     if (submitButton) {
       const originalText = submitButton.value;
       submitButton.value = "Copied !";
